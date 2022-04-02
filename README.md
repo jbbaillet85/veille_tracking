@@ -6,11 +6,25 @@
 # veille_tracking
 application de tracking de lecture de livres
 
+# Logiciels
+- Python 3.10
+- Django 4
+- Postgresql 14
+- draw.io
+- 
 # Tableau Trello
 https://trello.com/b/kXOWpHUQ/veilletraking#
 
 
-python manage.py makemigrations
-python manage.py migrate
-python manage.py collectstatic
-python manage.py runserver
+# Commandes
+```
+pip install pipenv
+pipenv --python 3.10
+pipenv install django
+pipenv install --dev flake8 pytest-django
+pipenv run pip freeze > requirements.txt
+pipenv run python manage.py runserver
+pipenv run python manage.py makemigrations
+pipenv run python manage.py migrate
+pipenv run python manage.py collectstatic
+```
