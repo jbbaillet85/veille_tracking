@@ -6,6 +6,9 @@
 # veille_tracking
 application de tracking de lecture de livres
 
+# Tableau Trello
+https://trello.com/b/kXOWpHUQ/veilletraking#
+
 
 python manage.py makemigrations
 python manage.py migrate
