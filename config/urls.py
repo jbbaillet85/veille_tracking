@@ -16,11 +16,14 @@ Including another URLconf
 from re import template
 from django.contrib import admin
 from django.urls import path, include
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
+from django.conf import settings
+from django.conf.urls.static import static
+from app_books.models import Book
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name="homepage/homepage.html")),
+    path('', ListView.as_view(template_name="homepage/homepage.html", model= Book)),
     path('user/', include('app_user.urls')),
     path('books/', include('app_books.urls')),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

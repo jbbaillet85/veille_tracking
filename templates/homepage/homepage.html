@@ -1,17 +1,36 @@
 {% extends 'base/base.html' %}
 {% load static %}
 {% block content %}
-<header class="bg-primary bg-gradient text-white">
-    <div class="container px-4 text-center">
-        <h1 class="fw-bolder">Welcome to Scrolling Nav</h1>
-        <p class="lead">A functional Bootstrap 5 boilerplate for one page scrolling websites</p>
-        <a class="btn btn-lg btn-light" href="#about">Start scrolling!</a>
+<header class="masthead text-center text-white">
+    <div class="masthead-content">
+        <div class="container px-5">
+            <h1 class="masthead-heading mb-0">Ready For Read</h1>
+            <h2 class="masthead-subheading mb-0">C'est parti</h2>
+            <ul>
+                {% for book in Book %}
+                    <li>{{ book }}</li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 </header>
-<!-- About section-->
-{% include 'homepage/about.html' %}
-<!-- Services section-->
-{% include 'homepage/services.html' %}
-<!-- Contact section-->
-{% include 'homepage/contact.html' %}
+<!-- Content section 1-->
+<section id="scroll">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="p-5"><img class="img-fluid rounded-circle" src="{% static 'assets/img/bibliotheque.jpg' %}" alt="..." /></div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                    <h2 class="display-4">Ready For Read</h2>
+                    <p>Beaucoup d’informaticiens francophones regrettent le peu de livres techniques dans la langue de Molières, 
+                        que ce soit en version papier ou numérique, la difficulté à trouver des informations sur ces livres, 
+                        puis parfois l’absence de challenge de lecture. Les objectifs de la solution est de créer un catalogue, 
+                        et un espace lecteur permettant à l’utilisateur de tracker ses lectures.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

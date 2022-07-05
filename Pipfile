@@ -10,6 +10,8 @@ tzdata = "==2021.5"
 Django = "==4.0.3"
 python-dotenv = "*"
 psycopg2 = "*"
+whitenoise = "*"
+django-import-export = "*"
 
 [dev-packages]
 pytest-django = "*"
