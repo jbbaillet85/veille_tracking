@@ -23,7 +23,7 @@ from app_books.models import Book
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', ListView.as_view(template_name="homepage/homepage.html", model= Book)),
+    path('', ListView.as_view(template_name="homepage/homepage.html", model= Book), name='homepage'),
     path('user/', include('app_user.urls')),
     path('books/', include('app_books.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

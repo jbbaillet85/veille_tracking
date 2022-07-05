@@ -16,6 +16,8 @@ django-import-export = "*"
 [dev-packages]
 pytest-django = "*"
 flake8 = "*"
+coverage = "*"
+pytest-cov = "*"
 
 [requires]
 python_version = "3.10"
