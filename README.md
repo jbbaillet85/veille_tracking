@@ -5,15 +5,59 @@
 
 # veille_tracking
 application de tracking de lecture de livres
+ ![livres](/static/assets/img/bibliotheque.jpg "livres")
 
 # Logiciels
-- Python 3.10
-- Django 4
-- Postgresql 14
-- draw.io
-- 
+- [Python 3.10](https://www.python.org/ "python")
+- [Django 4](https://www.djangoproject.com/ "django")
+- [Postgresql 14](https://www.postgresql.fr/ "Postgresql")
+- [draw.io](https://draw-io.fr.softonic.com/ "draw.io")
 # Tableau Trello
 https://trello.com/b/kXOWpHUQ/veilletraking#
+
+# Modèles
+
+- Book
+  - title
+  - slug
+  - count of pages
+  - current_page
+  - ISBN
+  - couverture
+  - edition (foreignkey)
+  - authore (foreignkey)
+  - url
+  - category (foreignkey)
+- Category
+  - name
+  - slug
+- Edition
+  - name
+  - slug
+- Author
+  - name
+  - lastname
+  - slug
+- User
+  - name
+  - lastename
+  - email
+
+![diagrame entité association](/doc/association_entity_diagram.jpg "livres")
+
+# Fonctionalités
+
+[ ] Afficher une page d'accueil  
+[ ] Créer un compte utilisateur  
+[ ] Se connecter à son compte utilisateur  
+[ ] Réinitialiser le mot de passe en cas d'oublis  
+[ ] Ajouter un livre à sa bibliothèque  
+[ ] Supprimer un livre de sa bibliothèque  
+[ ] Tracker la lecture d'un livre  
+[ ] Afficher l'avancé de la lecture du livre  
+[ ] Barre de recherche de l'application  
+[ ] Afficher le catalogue de livres  
+[ ] Afficher le détail d'un livre  
 
 
 # Commandes
