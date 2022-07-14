@@ -1,3 +1,4 @@
+from operator import mod
 from tabnanny import verbose
 from django.template.defaultfilters import slugify
 from django.db import models
@@ -15,7 +16,9 @@ class Book(models.Model):
 
 
 class Edition(models.Model):
-    name = models.CharField(max_length=255, unique=True, verbose_name="Editeur", default="")
+    name = models.CharField(
+        max_length=255, unique=True, verbose_name="Editeur", default=""
+    )
     slug = models.SlugField(max_length=255, unique=True, blank=True)
 
     class Meta:
@@ -23,7 +26,7 @@ class Edition(models.Model):
 
     def __str__(self):
         return slugify(self.name)
-    
+
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.name)
@@ -31,7 +34,9 @@ class Edition(models.Model):
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=255, unique=True, verbose_name="Catégorie", default="")
+    name = models.CharField(
+        max_length=255, unique=True, verbose_name="Catégorie", default=""
+    )
     slug = models.SlugField(max_length=255, unique=True, blank=True)
 
     class Meta:
@@ -39,7 +44,7 @@ class Category(models.Model):
 
     def __str__(self):
         return slugify(self.name)
-    
+
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.name)
@@ -47,10 +52,18 @@ class Category(models.Model):
 
 
 class Author(models.Model):
-    pass
+    name = models.CharField(max_length=100, verbose_name="Nom", default="")
+    lastname = models.CharField(max_length=100, verbose_name="Prénom", default="")
+    contact = models.URLField(verbose_name="Contact", unique=True, default="")
+    slug = models.SlugField(max_length=255,default="")
 
     class Meta:
-        pass
+        verbose_name = "Auteur(e)"
 
     def __str__(self):
-        pass
+        return self.slug
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.name + self.lastname)
+        super().save(*args, **kwargs)
