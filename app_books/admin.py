@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Edition, Category, Author
+from .models import Book, Edition, Category, Author
 
 
 class EditionAdmin(admin.ModelAdmin):
@@ -21,5 +21,12 @@ class AuthorAdmin(admin.ModelAdmin):
     list_display = ("name", "lastname", "contact")
     search_fields = ["name", "lastname", "contact"]
 
-
 admin.site.register(Author, AuthorAdmin)
+
+class BookAdmin(admin.ModelAdmin):
+    list_display = ("title", "count_pages", "ISBN", "author", "edition",)
+    search_fields = ["title", "count_pages", "ISBN", "author", "edition",]
+
+admin.site.register(Book, BookAdmin)
+
+
