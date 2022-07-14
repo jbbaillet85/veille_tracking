@@ -1,3 +1,4 @@
+from tabnanny import verbose
 from django.template.defaultfilters import slugify
 from django.db import models
 
@@ -30,13 +31,19 @@ class Edition(models.Model):
 
 
 class Category(models.Model):
-    pass
+    name = models.CharField(max_length=255, unique=True, verbose_name="Catégorie", default="")
+    slug = models.SlugField(max_length=255, unique=True, blank=True)
 
     class Meta:
-        pass
+        verbose_name = "Catégorie"
 
     def __str__(self):
-        pass
+        return slugify(self.name)
+    
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.name)
+        super().save(*args, **kwargs)
 
 
 class Author(models.Model):

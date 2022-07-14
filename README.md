@@ -71,4 +71,6 @@ pipenv run python manage.py runserver
 pipenv run python manage.py makemigrations
 pipenv run python manage.py migrate
 pipenv run python manage.py collectstatic
+pipenv run pytest
+pipenv run pytest --cov=. --cov-report html
 ```
