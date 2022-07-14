@@ -1,3 +1,9 @@
 from django.contrib import admin
+from .models import Edition
 
-# Register your models here.
+
+class EditionAdmin(admin.ModelAdmin):
+    list_display = ("name", "slug")
+    search_fields = ["name"]
+
+admin.site.register(Edition, EditionAdmin)
