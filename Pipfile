@@ -9,15 +9,17 @@ sqlparse = "==0.4.2"
 tzdata = "==2021.5"
 Django = "==4.0.3"
 python-dotenv = "*"
-psycopg2 = "*"
 whitenoise = "*"
 django-import-export = "*"
+psycopg2 = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 pytest-django = "*"
 flake8 = "*"
 coverage = "*"
 pytest-cov = "*"
+black = "*"
 
 [requires]
 python_version = "3.10"
