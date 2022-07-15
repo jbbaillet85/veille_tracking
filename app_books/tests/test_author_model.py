@@ -12,6 +12,8 @@ def test_author_model():
     contact = "https://www.linkedin.com/in/robert-martin-7395b0/"
     slug = slugify(lastname + name)
     client = Client()
-    author = Author.objects.create(name=name, lastname=lastname, contact=contact, slug=slug)
+    author = Author.objects.create(
+        name=name, lastname=lastname, contact=contact, slug=slug
+    )
     expected_value = slug
     assert str(author) == expected_value

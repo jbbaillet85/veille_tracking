@@ -17,16 +17,30 @@ class CategoryAdmin(admin.ModelAdmin):
 
 admin.site.register(Category, CategoryAdmin)
 
+
 class AuthorAdmin(admin.ModelAdmin):
     list_display = ("name", "lastname", "contact")
     search_fields = ["name", "lastname", "contact"]
 
+
 admin.site.register(Author, AuthorAdmin)
 
+
 class BookAdmin(admin.ModelAdmin):
-    list_display = ("title", "count_pages", "ISBN", "author", "edition",)
-    search_fields = ["title", "count_pages", "ISBN", "author", "edition",]
+    list_display = (
+        "title",
+        "count_pages",
+        "ISBN",
+        "author",
+        "edition",
+    )
+    search_fields = [
+        "title",
+        "count_pages",
+        "ISBN",
+        "author",
+        "edition",
+    ]
+
 
 admin.site.register(Book, BookAdmin)
-
-

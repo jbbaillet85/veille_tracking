@@ -1,15 +1,16 @@
 import pytest
 
-from django.test import Client
+from django.urls import reverse, resolve
 from django.template.defaultfilters import slugify
-from app_books.models import Book, Author, Category, Edition
+from django.test import Client
+from pytest_django.asserts import assertTemplateUsed
+from app_books.models import Author, Category, Edition, Book
 
 
 @pytest.mark.django_db
-def test_book_model():
+def test_detail_book_url_view():
     author = Author(
-        name="Martin", lastname="Robert",
-        contact="contact", slug="martin-robert"
+        name="Martin", lastname="Robert", contact="contact", slug="martin-robert"
     )
     author.save()
     category = Category(name="Méthodes Agiles", slug="methodes-agiles")
@@ -21,8 +22,7 @@ def test_book_model():
     current_page = 0
     ISBN = "9782326002869"
     more_infos = "https://www.pearson.fr/fr/book/?GCOI=27440100017670"
-    couverture = "https://www.pearson.fr/resources/titles/27440100017670/images/27440100017670L.jpg" #qa
-    client = Client()
+    couverture = "https://www.pearson.fr/resources/titles/27440100017670/images/27440100017670L.jpg"  # qa
     book = Book.objects.create(
         title=title,
         slug=slug,
@@ -35,5 +35,10 @@ def test_book_model():
         category=category,
         edition=edition,
     )
-    expected_value = slug
-    assert str(book) == expected_value
+    client = Client()
+    path = reverse("book-detail", kwargs={"slug": book.slug})
+    response = client.get(path)
+    assert path == f"/book/{book.slug}/"
+    assert resolve(path).view_name == "book-detail"
+    assert response.status_code == 200
+    assertTemplateUsed(response, "app_books/detail_book.html")

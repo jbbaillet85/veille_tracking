@@ -4,6 +4,7 @@ from django.db import models
 
 # Create your models here.
 
+
 class Edition(models.Model):
     name = models.CharField(
         max_length=255, unique=True, verbose_name="Editeur", default=""
@@ -22,12 +23,11 @@ class Edition(models.Model):
         super().save(*args, **kwargs)
 
 
-
 class Author(models.Model):
     name = models.CharField(max_length=100, verbose_name="Nom", default="")
     lastname = models.CharField(max_length=100, verbose_name="Prénom", default="")
-    contact = models.URLField(verbose_name="Contact", unique=True, default="")
-    slug = models.SlugField(max_length=255,default="")
+    contact = models.URLField(verbose_name="Contact", default="", blank=True)
+    slug = models.SlugField(max_length=255, default="", unique=True, blank=True)
 
     class Meta:
         verbose_name = "Auteur(e)"
@@ -37,7 +37,7 @@ class Author(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = slugify(self.name + self.lastname)
+            self.slug = slugify(self.name + "-" + self.lastname)
         super().save(*args, **kwargs)
 
 
@@ -50,7 +50,9 @@ class Book(models.Model):
     slug = models.SlugField(max_length=255, unique=True, blank=True, default="")
     couverture = models.URLField(verbose_name="Couverture", default="")
     author = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True, blank=True)
-    edition = models.ForeignKey(Edition, on_delete=models.SET_NULL, null=True, blank=True)
+    edition = models.ForeignKey(
+        Edition, on_delete=models.SET_NULL, null=True, blank=True
+    )
 
     class Meta:
         verbose_name = "Livre"
@@ -62,6 +64,7 @@ class Book(models.Model):
         if not self.slug:
             self.slug = slugify(self.title)
         super().save(*args, **kwargs)
+
 
 class Category(models.Model):
     name = models.CharField(

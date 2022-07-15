@@ -1,0 +1,21 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<header class="masthead text-center text-white">
+    <div class="masthead-content">
+        <div class="container px-5">
+            <h1 class="masthead-heading mb-0">{{ object.title }}</h1>
+            <div class="container-fluid p-0">
+                <p>{{ object.category }}</p>
+                <img src="{{ object.couverture }}" alt="{{ object.title }}" width="200" height="300">
+                <div class="row g-0">
+                    <p>ISBN: {{ object.ISBN }}</p>
+                    <p>Nombre de pages: {{ object.count_pages }}</p>
+                    <p>Edition: {{ object.edition.name }}</p>
+                    <p>Autheur: {{ object.author }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock %}

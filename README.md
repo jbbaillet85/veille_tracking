@@ -47,7 +47,7 @@ https://trello.com/b/kXOWpHUQ/veilletraking#
 
 # Fonctionalités
 
-[ ] Afficher une page d'accueil  
+[X] Afficher une page d'accueil  
 [ ] Créer un compte utilisateur  
 [ ] Se connecter à son compte utilisateur  
 [ ] Réinitialiser le mot de passe en cas d'oublis  
@@ -57,7 +57,7 @@ https://trello.com/b/kXOWpHUQ/veilletraking#
 [ ] Afficher l'avancé de la lecture du livre  
 [ ] Barre de recherche de l'application  
 [ ] Afficher le catalogue de livres  
-[ ] Afficher le détail d'un livre  
+[X] Afficher le détail d'un livre  
 
 
 # Commandes
