@@ -20,8 +20,21 @@
         <!-- Navigation-->
         {% include 'base/navebarre.html' %}
         <!-- Header-->
-        {% block content %}
-        {% endblock %}
+        <header class="masthead text-center text-white">
+            <div class="masthead-content">
+                <div class="container px-5">
+                    <h1 class="masthead-heading mb-0">{% block title_h1 %}{% endblock %}</h1>
+                    <h2 class="masthead-subheading mb-0">{% block title_h2 %}{% endblock %}</h2>
+                    <div class="container-fluid p-0">
+                        <div class="row g-0">
+                            {% block content %}
+                            {% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        {% block presentation %}{% endblock %}
         <!-- Footer-->
         {% include 'base/footer.html' %}
 

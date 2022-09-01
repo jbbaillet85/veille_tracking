@@ -1,13 +1,8 @@
 {% extends 'base/base.html' %}
 {% load static %}
+{% block title_h1 %}Ready For Read{% endblock %}
+{% block title_h2 %}C'est parti{% endblock %}
 {% block content %}
-<header class="masthead text-center text-white">
-    <div class="masthead-content">
-        <div class="container px-5">
-            <h1 class="masthead-heading mb-0">Ready For Read</h1>
-            <h2 class="masthead-subheading mb-0">C'est parti</h2>
-            <div class="container-fluid p-0">
-                <div class="row g-0">
                 {% for book in object_list %}
                     <figure class="card-body col-lg-4 col-sm-6">
                         <a href="{% url "book-detail" book.slug %}">
@@ -35,12 +30,9 @@
                     </li>
                 </ul>
             </nav>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+{% endblock %}
 <!-- Content section 1-->
+{% block presentation %}
 <section id="scroll">
     <div class="container px-5">
         <div class="row gx-5 align-items-center">
