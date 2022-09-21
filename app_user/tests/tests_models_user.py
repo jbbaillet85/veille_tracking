@@ -1,11 +1,14 @@
+from unittest import TestCase
 import pytest
 from app_user.models import User
 
 
-@pytest.mark.django_db
-def test_user_model():
-    email = "user@gmail.com"
-    password = "password"
-    user = User.objects.create(email=email, password=password)
-    expected_value = email
-    assert str(user) == expected_value
+class Test_User(TestCase):
+    def setUp(self) -> None:
+        self.email = "user@gmail.com"
+        self.password = "password"
+        self.user = User.objects.create(email=self.email, password=self.password)
+
+    @pytest.mark.django_db
+    def test_user_model(self):
+        assert str(self.user) == self.email

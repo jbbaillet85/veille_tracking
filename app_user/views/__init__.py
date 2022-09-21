@@ -11,7 +11,7 @@ def register(request):
             form.cleaned_data
             user = form.save()
             login(request, user)
-            return redirect("space_user")
+            return redirect("library")
         else:
             context["errors"] = form.errors
     context["form"] = RegisterForm()
