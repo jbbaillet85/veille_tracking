@@ -1,3 +1,4 @@
+from unittest import TestCase
 import pytest
 
 from django.test import Client
@@ -5,15 +6,19 @@ from django.template.defaultfilters import slugify
 from app_books.models import Author
 
 
-@pytest.mark.django_db
-def test_author_model():
-    name = "Martin"
-    lastname = "Robert"
-    contact = "https://www.linkedin.com/in/robert-martin-7395b0/"
-    slug = slugify(lastname + name)
-    client = Client()
-    author = Author.objects.create(
-        name=name, lastname=lastname, contact=contact, slug=slug
-    )
-    expected_value = slug
-    assert str(author) == expected_value
+class Test_Author(TestCase):
+    def setUp(self):
+        name = "Martin"
+        lastname = "Robert"
+        contact = "https://www.linkedin.com/in/robert-martin-7395b0/"
+        slug = slugify(name + "-" + lastname)
+        client = Client()
+        self.author = Author.objects.create(
+            name=name, lastname=lastname, contact=contact
+        )
+        self.expected_value = slug
+
+    @pytest.mark.django_db
+    def test_author_model(self):
+        assert str(self.author) == self.expected_value
+        assert self.author.slug == self.expected_value
