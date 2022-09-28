@@ -6,10 +6,12 @@ from app_library.models import Library
 from app_books.models import Book
 from app_user.models import User
 
+
 class CreateLibraryView(CreateView):
-    model=Library
-    template_name='app_library/library.html'
-    fields=['book', 'user']
+    model = Library
+    template_name = "app_library/library.html"
+    fields = ["book", "user"]
+
 
 @login_required
 def createLibrary(request):
@@ -24,10 +26,9 @@ def createLibrary(request):
     if request.method == "POST":
         slug = request.POST["book_slug"]
         book = Book.objects.filter(slug=slug)
-        user:User = request.user
+        user: User = request.user
         library, _ = Library.objects.get_or_create(book=book[0], user=user)
         return redirect("library")
-        
 
 
 @login_required

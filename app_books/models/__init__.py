@@ -25,9 +25,11 @@ class Edition(models.Model):
 
 class Author(models.Model):
     name = models.CharField(max_length=100, verbose_name="Nom", default="")
-    lastname = models.CharField(max_length=100, verbose_name="Prénom", default="")
+    lastname = models.CharField(
+        max_length=100, verbose_name="Prénom", default="")
     contact = models.URLField(verbose_name="Contact", default="", blank=True)
-    slug = models.SlugField(max_length=255, default="", unique=True, blank=True)
+    slug = models.SlugField(
+        max_length=255, default="", unique=True, blank=True)
 
     class Meta:
         verbose_name = "Auteur(e)"
@@ -43,13 +45,16 @@ class Author(models.Model):
 
 class Book(models.Model):
     title = models.CharField(max_length=255, verbose_name="Titre", default="")
-    count_pages = models.IntegerField(verbose_name="Nombre de pages", default=0)
+    count_pages = models.IntegerField(
+        verbose_name="Nombre de pages", default=0)
     current_page = models.IntegerField(verbose_name="Page Courante", default=0)
     ISBN = models.CharField(max_length=13, default="")
     more_infos = models.URLField(verbose_name="Plus d'infos", default="")
-    slug = models.SlugField(max_length=255, unique=True, blank=True, default="")
+    slug = models.SlugField(
+        max_length=255, unique=True, blank=True, default="")
     couverture = models.URLField(verbose_name="Couverture", default="")
-    author = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True, blank=True)
+    author = models.ForeignKey(
+        Author, on_delete=models.SET_NULL, null=True, blank=True)
     edition = models.ForeignKey(
         Edition, on_delete=models.SET_NULL, null=True, blank=True
     )

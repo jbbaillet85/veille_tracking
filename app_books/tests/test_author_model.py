@@ -1,7 +1,6 @@
 from unittest import TestCase
 import pytest
 
-from django.test import Client
 from django.template.defaultfilters import slugify
 from app_books.models import Author
 
@@ -12,7 +11,6 @@ class Test_Author(TestCase):
         lastname = "Robert"
         contact = "https://www.linkedin.com/in/robert-martin-7395b0/"
         slug = slugify(name + "-" + lastname)
-        client = Client()
         self.author = Author.objects.create(
             name=name, lastname=lastname, contact=contact
         )

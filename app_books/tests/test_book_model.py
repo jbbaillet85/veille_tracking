@@ -1,7 +1,6 @@
 from unittest import TestCase
 import pytest
 
-from django.test import Client
 from django.template.defaultfilters import slugify
 from app_books.models import Book, Author, Category, Edition
 
@@ -9,10 +8,12 @@ from app_books.models import Book, Author, Category, Edition
 class Test_Book(TestCase):
     def setUp(self):
         self.author = Author(
-            name="Martin", lastname="Robert", contact="contact", slug="martin-robert"
+            name="Martin", lastname="Robert",
+            contact="contact", slug="martin-robert"
         )
         self.author.save()
-        self.category = Category(name="Méthodes Agiles", slug="methodes-agiles")
+        self.category = Category(
+            name="Méthodes Agiles", slug="methodes-agiles")
         self.edition = Edition(name="Pearson", slug="pearson")
         self.edition.save()
         title = "Agile Proprement Retour à l'essentiel"
@@ -21,8 +22,7 @@ class Test_Book(TestCase):
         current_page = 0
         ISBN = "9782326002869"
         more_infos = "https://www.pearson.fr/fr/book/?GCOI=27440100017670"
-        couverture = "https://www.pearson.fr/resources/titles/27440100017670/images/27440100017670L.jpg"  # qa
-        client = Client()
+        couverture = "https://www.pearson.fr/resources/titles/27440100017670/images/27440100017670L.jpg"  # noqa
         self.book = Book.objects.create(
             title=title,
             count_pages=count_pages,

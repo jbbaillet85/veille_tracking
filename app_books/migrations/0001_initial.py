@@ -8,66 +8,168 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Author',
+            name="Author",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(default='', max_length=100, verbose_name='Nom')),
-                ('lastname', models.CharField(default='', max_length=100, verbose_name='Prénom')),
-                ('contact', models.URLField(blank=True, default='', verbose_name='Contact')),
-                ('slug', models.SlugField(blank=True, default='', max_length=255, unique=True)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "name",
+                    models.CharField(
+                        default="", max_length=100, verbose_name="Nom"),
+                ),
+                (
+                    "lastname",
+                    models.CharField(
+                        default="", max_length=100, verbose_name="Prénom"),
+                ),
+                (
+                    "contact",
+                    models.URLField(
+                        blank=True, default="", verbose_name="Contact"),
+                ),
+                (
+                    "slug",
+                    models.SlugField(
+                        blank=True, default="", max_length=255, unique=True
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Auteur(e)',
+                "verbose_name": "Auteur(e)",
             },
         ),
         migrations.CreateModel(
-            name='Book',
+            name="Book",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(default='', max_length=255, verbose_name='Titre')),
-                ('count_pages', models.IntegerField(default=0, verbose_name='Nombre de pages')),
-                ('current_page', models.IntegerField(default=0, verbose_name='Page Courante')),
-                ('ISBN', models.CharField(default='', max_length=13)),
-                ('more_infos', models.URLField(default='', verbose_name="Plus d'infos")),
-                ('slug', models.SlugField(blank=True, default='', max_length=255, unique=True)),
-                ('couverture', models.URLField(default='', verbose_name='Couverture')),
-                ('author', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='app_books.author')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "title",
+                    models.CharField(
+                        default="", max_length=255, verbose_name="Titre"),
+                ),
+                (
+                    "count_pages",
+                    models.IntegerField(
+                        default=0, verbose_name="Nombre de pages"),
+                ),
+                (
+                    "current_page",
+                    models.IntegerField(
+                        default=0, verbose_name="Page Courante"),
+                ),
+                ("ISBN", models.CharField(default="", max_length=13)),
+                (
+                    "more_infos",
+                    models.URLField(default="", verbose_name="Plus d'infos"),
+                ),
+                (
+                    "slug",
+                    models.SlugField(
+                        blank=True, default="", max_length=255, unique=True
+                    ),
+                ),
+                ("couverture", models.URLField(
+                    default="", verbose_name="Couverture")),
+                (
+                    "author",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.SET_NULL,
+                        to="app_books.author",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Livre',
+                "verbose_name": "Livre",
             },
         ),
         migrations.CreateModel(
-            name='Edition',
+            name="Edition",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(default='', max_length=255, unique=True, verbose_name='Editeur')),
-                ('slug', models.SlugField(blank=True, max_length=255, unique=True)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "name",
+                    models.CharField(
+                        default="", max_length=255,
+                        unique=True, verbose_name="Editeur"
+                    ),
+                ),
+                ("slug", models.SlugField(
+                    blank=True, max_length=255, unique=True)),
             ],
             options={
-                'verbose_name': 'Editeur',
+                "verbose_name": "Editeur",
             },
         ),
         migrations.CreateModel(
-            name='Category',
+            name="Category",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(default='', max_length=255, unique=True, verbose_name='Catégorie')),
-                ('slug', models.SlugField(blank=True, max_length=255, unique=True)),
-                ('category', models.ManyToManyField(to='app_books.book', verbose_name='Livre')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "name",
+                    models.CharField(
+                        default="",
+                        max_length=255,
+                        unique=True,
+                        verbose_name="Catégorie",
+                    ),
+                ),
+                ("slug", models.SlugField(
+                    blank=True, max_length=255, unique=True)),
+                (
+                    "category",
+                    models.ManyToManyField(
+                        to="app_books.book", verbose_name="Livre"),
+                ),
             ],
             options={
-                'verbose_name': 'Catégorie',
+                "verbose_name": "Catégorie",
             },
         ),
         migrations.AddField(
-            model_name='book',
-            name='edition',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='app_books.edition'),
+            model_name="book",
+            name="edition",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                to="app_books.edition",
+            ),
         ),
     ]

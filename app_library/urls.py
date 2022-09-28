@@ -1,6 +1,6 @@
 from django.urls import path
 from django.views.generic import ListView
-from app_library.views import createLibrary, saveCurrentPage, CreateLibraryView
+from app_library.views import createLibrary, saveCurrentPage
 from .models import Library
 
 urlpatterns = [
