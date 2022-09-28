@@ -1,10 +1,9 @@
 {% extends 'base/base.html' %}
 {% load static %}
+{% block title_h1 %}{{ object.title }}{% endblock %}
 {% block content %}
-<header class="masthead text-center text-white">
     <div class="masthead-content">
         <div class="container px-5">
-            <h1 class="masthead-heading mb-0">{{ object.title }}</h1>
             <div class="container-fluid p-0">
                 <p>{{ object.category }}</p>
                 <img src="{{ object.couverture }}" alt="{{ object.title }}" width="200" height="300">
@@ -13,9 +12,13 @@
                     <p>Nombre de pages: {{ object.count_pages }}</p>
                     <p>Edition: {{ object.edition.name }}</p>
                     <p>Autheur: {{ object.author }}</p>
+                    <form method="post" action="{% url 'createLibrary' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="book_slug" value={{ object.slug }}>
+                        <input type="submit" value="ajouter">
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-</header>
 {% endblock %}

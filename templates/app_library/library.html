@@ -1,0 +1,22 @@
+{% extends "base/base.html" %}
+{% block title_h1 %}Compte {{ user.email }}{% endblock %}
+{% block content %}
+{% for library in object_list %}
+        <article>
+        <figure class="card-body col-lg-4 col-sm-6">
+            <img src="{{ library.book.couverture }}" alt="{{ library.book.title }}" width="200" height="300">
+        </figure>
+        <button value={{ library.current_page}}>page {{ library.current_page}}</button>
+        <label for="library">progression:</label>
+        <progress id="library" max="{{ library.book.count_pages }}" value="{{ library.current_page }}"> {{ library.book.count_pages }} </progress>
+        <form method="post" action="{% url 'saveCurrentPage' %}">
+            {% csrf_token %}
+            <label for="current_page">Page courante</label>
+            <input type="number" id="current_page" name="current_page"
+            min="{{ library.book.current_page }}" max="{{ library.book.count_pages }}">
+            <input type="hidden" name="book_slug" value={{ library.book.slug }}>
+            <input type="submit" value="enregistrer">
+        </form>
+    </article>     
+{% endfor %}
+{% endblock %}

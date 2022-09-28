@@ -48,15 +48,15 @@ https://trello.com/b/kXOWpHUQ/veilletraking#
 # Fonctionalités
 
 [X] Afficher une page d'accueil  
-[ ] Créer un compte utilisateur  
-[ ] Se connecter à son compte utilisateur  
+[X] Créer un compte utilisateur  
+[X] Se connecter à son compte utilisateur  
 [ ] Réinitialiser le mot de passe en cas d'oublis  
-[ ] Ajouter un livre à sa bibliothèque  
+[X] Ajouter un livre à sa bibliothèque  
 [ ] Supprimer un livre de sa bibliothèque  
-[ ] Tracker la lecture d'un livre  
-[ ] Afficher l'avancé de la lecture du livre  
+[X] Tracker la lecture d'un livre  
+[X] Afficher l'avancé de la lecture du livre  
 [ ] Barre de recherche de l'application  
-[ ] Afficher le catalogue de livres  
+[X] Afficher le catalogue de livres  
 [X] Afficher le détail d'un livre  
 
 
