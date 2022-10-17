@@ -5,9 +5,10 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <form class="navbar-form navbar-left" role="search"> 
-                        <div class="form-group"> 
-                            <input type="text" class="form-control" placeholder="Recherche">
+                    <form action="{% url 'search_book' %}" class="navbar-form navbar-left" role="search"> 
+                        <div class="form-group">
+                            {% csrf_token %}
+                            <input type="text" class="form-control" placeholder="Recherche" name="keyword" id="keyword">
                         </div>
                     </form>
                 </li>
