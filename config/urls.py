@@ -1,4 +1,3 @@
-from re import template
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView, ListView
@@ -17,6 +16,11 @@ urlpatterns = [
             ordering=["-id"],
         ),
         name="homepage",
+    ),
+    path(
+        "credits",
+        TemplateView.as_view(template_name="credits/credits.html"),
+        name="credits",
     ),
     path("user/", include("app_user.urls")),
     path("book/", include("app_books.urls")),
