@@ -8,12 +8,12 @@ asgiref = "==3.5.0"
 sqlparse = "==0.4.2"
 tzdata = "==2021.5"
 Django = "==4.0.3"
-python-dotenv = "*"
 whitenoise = "*"
 django-import-export = "*"
 psycopg2 = "*"
 psycopg2-binary = "*"
 pillow = "*"
+gunicorn = "*"
 
 [dev-packages]
 pytest-django = "*"
