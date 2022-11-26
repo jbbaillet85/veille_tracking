@@ -11,11 +11,12 @@ application de tracking de lecture de livres
 - [Python 3.10](https://www.python.org/ "python")
 - [Django 4](https://www.djangoproject.com/ "django")
 - [Postgresql 14](https://www.postgresql.fr/ "Postgresql")
+- [Docker 20.10](https://www.docker.com/ "Docker")
 - [draw.io](https://draw-io.fr.softonic.com/ "draw.io")
 # Tableau Trello
 https://trello.com/b/kXOWpHUQ/veilletraking#
 
-# Modèles
+ # Modèles
 
 - Book
   - title
@@ -60,17 +61,25 @@ https://trello.com/b/kXOWpHUQ/veilletraking#
 [X] Afficher le détail d'un livre  
 
 
-# Commandes
+# Commandes Pipenv
 ```
 pip install pipenv
 pipenv --python 3.10
 pipenv install django
 pipenv install --dev flake8 pytest-django
 pipenv run pip freeze > requirements.txt
+pipenv lock -r > requirements.txt
 pipenv run python manage.py runserver
 pipenv run python manage.py makemigrations
 pipenv run python manage.py migrate
 pipenv run python manage.py collectstatic
 pipenv run pytest
 pipenv run pytest --cov=. --cov-report html
+```
+# Commandes docker
+Sous windows:lancer docker-deskop
+```
+docker-compose build
+docker-compose up
+docker-compose logs -f
 ```
