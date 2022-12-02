@@ -10,19 +10,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      SQL_USER: postgres
-      SQL_PASSWORD: postgres
-      SQL_HOST: localhost
-      SQL_DB: db_test
-      SQL_PORT: 5432
+      POSTGRES_USER: veille
+      POSTGRES_PASSWORD: veille
+      POSTGRES_HOST: localhost
+      POSTGRES_DB: veille
+      POSTGRES_PORT: 5432
       DJANGO_SECRET_KEY: test_key_django
     services:
       postgres_main:
         image: postgres:14
         env:
-          SQL_USER: ${{ env.SQL_USER }}
-          SQL_PASSWORD: ${{ env.SQL_PASSWORD }}
-          SQL_DB: ${{ env.SQL_DB }}
+          POSTGRES_USER: ${{ env.POSTGRES_USER }}
+          POSTGRES_PASSWORD: ${{ env.POSTGRES_PASSWORD }}
+          POSTGRES_DB: ${{ env.POSTGRES_DB }}
         ports:
           - 5432:5432
     strategy:
@@ -43,10 +43,10 @@ jobs:
         env:
           DEBUG: "0"
           DJANGO_SECRET_KEY: ${{ env.DJANGO_SECRET_KEY }}
-          DB_USERNAME: ${{ env.SQL_USER }}
-          DB_PASSWORD: ${{ env.SQL_PASSWORD }}
-          DB_HOST: ${{ env.SQL_HOST }}
-          DB_DATABASE: ${{ env.SQL_DB }}
-          DB_PORT: ${{ env.SQL_PORT }}
+          DB_USERNAME: ${{ env.POSTGRES_USER }}
+          DB_PASSWORD: ${{ env.POSTGRES_PASSWORD }}
+          DB_HOST: ${{ env.POSTGRES_HOST }}
+          DB_DATABASE: ${{ env.POSTGRES_DB }}
+          DB_PORT: ${{ env.POSTGRES_PORT }}
         run: |
           pytest
