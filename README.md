@@ -67,7 +67,7 @@ pip install pipenv
 pipenv --python 3.10
 pipenv install django
 pipenv install --dev flake8 pytest-django
-pipenv run pip freeze > requirements.txt
+pipenv run pip freeze > requirements_dev.txt
 pipenv lock -r > requirements.txt
 pipenv run python manage.py runserver
 pipenv run python manage.py makemigrations

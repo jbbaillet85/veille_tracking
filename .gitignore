@@ -10,6 +10,8 @@ __pycache__/
 # Distribution / packaging
 .env
 .env.dev
+.env.prod
+.env.prod.db
 static_root/
 staticfiles/
 .Python
