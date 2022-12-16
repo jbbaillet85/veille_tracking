@@ -8,6 +8,10 @@ SECRET_KEY = os.environ.get(
     "SECRET_KEY", default="0kv@@+4yi_*4)u_lfbd)kx4_(+y@!q52nd4a*rekkif8on&wg2"
 )
 
+DJANGO_SUPERUSER_PASSWORD= os.environ.get(
+    "DJANGO_SUPERUSER_PASSWORD"
+)
+
 DEBUG = int(os.environ.get("DEBUG", default=True))
 
 ALLOWED_HOSTS = os.environ.get(
