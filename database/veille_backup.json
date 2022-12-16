@@ -1,0 +1,1270 @@
+[
+    {
+        "model": "app_books.edition",
+        "pk": 1,
+        "fields": {
+            "name": "Editions CyberdÚfenseur",
+            "slug": "editions-cyberdefenseur"
+        }
+    },
+    {
+        "model": "app_books.edition",
+        "pk": 2,
+        "fields": {
+            "name": "editions addison-wesley",
+            "slug": "editions-addison-wesley"
+        }
+    },
+    {
+        "model": "app_books.edition",
+        "pk": 3,
+        "fields": {
+            "name": "Eyrolles",
+            "slug": "eyrolles"
+        }
+    },
+    {
+        "model": "app_books.edition",
+        "pk": 4,
+        "fields": {
+            "name": "Pearson",
+            "slug": "pearson"
+        }
+    },
+    {
+        "model": "app_books.edition",
+        "pk": 5,
+        "fields": {
+            "name": "Dunod",
+            "slug": "dunod"
+        }
+    },
+    {
+        "model": "app_books.edition",
+        "pk": 6,
+        "fields": {
+            "name": "ENI",
+            "slug": "eni"
+        }
+    },
+    {
+        "model": "app_books.edition",
+        "pk": 7,
+        "fields": {
+            "name": "Editions Lavoisier",
+            "slug": "editions-lavoisier"
+        }
+    },
+    {
+        "model": "app_books.edition",
+        "pk": 8,
+        "fields": {
+            "name": "O'REILLY",
+            "slug": "oreilly"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 1,
+        "fields": {
+            "name": "C. Martin",
+            "lastname": "Robert",
+            "contact": "",
+            "slug": "c-martin-robert"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 2,
+        "fields": {
+            "name": "Jacobson",
+            "lastname": "Ivar",
+            "contact": "",
+            "slug": "jacobson-ivar"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 3,
+        "fields": {
+            "name": "Sztandarowski",
+            "lastname": "Lucas",
+            "contact": "https://twitter.com/lsztandarowski",
+            "slug": "sztandarowski-lucas"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 4,
+        "fields": {
+            "name": "ZiadÚ",
+            "lastname": "Tarek",
+            "contact": "https://www.linkedin.com/in/tarekziade/",
+            "slug": "ziade-tarek"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 5,
+        "fields": {
+            "name": "Prieur",
+            "lastname": "Benoit",
+            "contact": "https://www.linkedin.com/in/benoitprieur/",
+            "slug": "prieur-benoit"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 6,
+        "fields": {
+            "name": "Boucheny",
+            "lastname": "Vincent",
+            "contact": "",
+            "slug": "boucheny-vincent"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 7,
+        "fields": {
+            "name": "Lardiere",
+            "lastname": "SÚbastien",
+            "contact": "https://www.linkedin.com/in/s%C3%A9bastien-lardi%C3%A8re-8381a814/",
+            "slug": "lardiere-sebastien"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 8,
+        "fields": {
+            "name": "Caliendo",
+            "lastname": "Julien",
+            "contact": "https://www.linkedin.com/in/caliendojulien/",
+            "slug": "caliendo-julien"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 9,
+        "fields": {
+            "name": "Debrauwer",
+            "lastname": "Laurent",
+            "contact": "https://www.linkedin.com/in/laurent-debrauwer-a111b810/",
+            "slug": "debrauwer-laurent"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 10,
+        "fields": {
+            "name": "Bornet",
+            "lastname": "Martial",
+            "contact": "https://www.linkedin.com/in/martial-bornet-9834421/",
+            "slug": "bornet-martial"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 11,
+        "fields": {
+            "name": "Rohaut",
+            "lastname": "SÚbastien",
+            "contact": "https://www.linkedin.com/in/s%C3%A9bastien-rohaut-808a4366/",
+            "slug": "rohaut-sebastien"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 12,
+        "fields": {
+            "name": "Dordoigne",
+            "lastname": "JosÚ",
+            "contact": "https://www.linkedin.com/in/jose-dordoigne-06452410/",
+            "slug": "dordoigne-jose"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 13,
+        "fields": {
+            "name": "Schalkwijk",
+            "lastname": "Laurent",
+            "contact": "https://www.linkedin.com/in/laurentschalkwijk/",
+            "slug": "schalkwijk-laurent"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 14,
+        "fields": {
+            "name": "La Lau",
+            "lastname": "Robert",
+            "contact": "",
+            "slug": "la-lau-robert"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 15,
+        "fields": {
+            "name": "Cizault",
+            "lastname": "GisÞle",
+            "contact": "",
+            "slug": "cizault-gisele"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 16,
+        "fields": {
+            "name": "Leite",
+            "lastname": "Ernesto",
+            "contact": "https://www.linkedin.com/in/ernestoleite/",
+            "slug": "leite-ernesto"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 17,
+        "fields": {
+            "name": "Dauzon",
+            "lastname": "Samuel",
+            "contact": "https://www.linkedin.com/in/samuel-dauzon-4ab1715b/",
+            "slug": "dauzon-samuel"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 18,
+        "fields": {
+            "name": "PerrÚ",
+            "lastname": "Yannig",
+            "contact": "https://www.linkedin.com/in/yannigperre/",
+            "slug": "perre-yannig"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 19,
+        "fields": {
+            "name": "Rosard",
+            "lastname": "FrÚdÚric",
+            "contact": "https://www.linkedin.com/in/jp-gouigoux/",
+            "slug": "frederic-rosard"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 20,
+        "fields": {
+            "name": "Bonnet",
+            "lastname": "Christophe",
+            "contact": "",
+            "slug": "bonnet-christophe"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 21,
+        "fields": {
+            "name": "Samson",
+            "lastname": "Patrick",
+            "contact": "https://www.linkedin.com/in/patrick-samson-2093451aa/",
+            "slug": "samson-patrick"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 22,
+        "fields": {
+            "name": "Baud",
+            "lastname": "Jean-Luc",
+            "contact": "",
+            "slug": "baud-jean-luc"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 23,
+        "fields": {
+            "name": "Poggioli",
+            "lastname": "Jean-Paul",
+            "contact": "https://www.linkedin.com/in/jean-paul-poggioli/",
+            "slug": "poggioli-jean-paul"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 24,
+        "fields": {
+            "name": "Clave",
+            "lastname": "Antoine",
+            "contact": "https://www.linkedin.com/in/antoine-clave-55965510/",
+            "slug": "clave-antoine"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 25,
+        "fields": {
+            "name": "Bailet",
+            "lastname": "Thomas",
+            "contact": "https://www.linkedin.com/in/thomas-bailet-95aa598/",
+            "slug": "bailet-thomas"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 26,
+        "fields": {
+            "name": "MacÚ",
+            "lastname": "Noel",
+            "contact": "https://www.linkedin.com/in/noelmace/",
+            "slug": "mace-noel"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 27,
+        "fields": {
+            "name": "Haro",
+            "lastname": "Christophe",
+            "contact": "",
+            "slug": "haro-christophe"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 28,
+        "fields": {
+            "name": "KOKAINA",
+            "lastname": "Sallah",
+            "contact": "https://www.linkedin.com/in/sallah-k/",
+            "slug": "kokaina-sallah"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 29,
+        "fields": {
+            "name": "Fowler",
+            "lastname": "Martin",
+            "contact": "https://martinfowler.com/",
+            "slug": "fowler-martin"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 30,
+        "fields": {
+            "name": "Patton",
+            "lastname": "Jeff",
+            "contact": "https://www.jpattonassociates.com/",
+            "slug": "patton-jeff"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 31,
+        "fields": {
+            "name": "Nebra",
+            "lastname": "Mathieu",
+            "contact": "https://www.linkedin.com/in/mathieunebra/",
+            "slug": "nebra-mathieu"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 32,
+        "fields": {
+            "name": "Le Goff",
+            "lastname": "Vincent",
+            "contact": "",
+            "slug": "le-goff-vincent"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 33,
+        "fields": {
+            "name": "Thuillier",
+            "lastname": "Victor",
+            "contact": "",
+            "slug": "thuillier-victor"
+        }
+    },
+    {
+        "model": "app_books.author",
+        "pk": 34,
+        "fields": {
+            "name": "Gribaumont",
+            "lastname": "Chantal",
+            "contact": "https://www.linkedin.com/in/cgribaumont/",
+            "slug": "gribaumont-chantal"
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 1,
+        "fields": {
+            "title": "Manuel de l'autodidacte en informatique",
+            "count_pages": 370,
+            "current_page": 0,
+            "ISBN": "0244878013",
+            "more_infos": "https://www.amazon.fr/Manuel-lautodidacte-informatique-Lucas-Sztandarowski/dp/0244878013",
+            "slug": "manuel-de-lautodidacte-en-informatique",
+            "couverture": "https://m.media-amazon.com/images/P/0244878013.01._SCLZZZZZZZ_SX500_.jpg",
+            "author": 3,
+            "edition": 1
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 2,
+        "fields": {
+            "title": "Le gÚnie logiciel orientÚ objet: Une approche fondÚe sur les cas d'utilisation",
+            "count_pages": 536,
+            "current_page": 0,
+            "ISBN": "2879080428",
+            "more_infos": "https://www.amazon.fr/g%C3%A9nie-logiciel-orient%C3%A9-objet-dutilisation/dp/2879080428",
+            "slug": "le-genie-logiciel-oriente-objet-une-approche-fondee-sur-les-cas-dutilisation",
+            "couverture": "https://m.media-amazon.com/images/I/5184v2dPsjL._SX338_BO1,204,203,200_.jpg",
+            "author": 2,
+            "edition": 2
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 3,
+        "fields": {
+            "title": "CommitStrip - Le Livre des Codeurs",
+            "count_pages": 128,
+            "current_page": 0,
+            "ISBN": "2954706201",
+            "more_infos": "https://www.amazon.fr/CommitStrip-Livre-Codeurs-Issartial/dp/2954706201",
+            "slug": "commitstrip-le-livre-des-codeurs",
+            "couverture": "https://m.media-amazon.com/images/I/41DrLuK12fL._SX414_BO1,204,203,200_.jpg",
+            "author": null,
+            "edition": null
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 4,
+        "fields": {
+            "title": "GESTION DE PROJET EXTREME PROGRAMMING",
+            "count_pages": 310,
+            "current_page": 0,
+            "ISBN": "221211561X",
+            "more_infos": "https://www.amazon.fr/Gestion-projet-Programming-Jean-Louis-B%C3%A9nard/dp/221211561X",
+            "slug": "gestion-de-projet-extreme-programming",
+            "couverture": "https://m.media-amazon.com/images/I/41PxnNbWjML._SX420_BO1,204,203,200_.jpg",
+            "author": null,
+            "edition": null
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 5,
+        "fields": {
+            "title": "Scrum, de la thÚorie Ó la pratique: Initiation. Perfectionnement. AgilitÚ.",
+            "count_pages": 248,
+            "current_page": 0,
+            "ISBN": "2212144709",
+            "more_infos": "https://www.amazon.fr/Scrum-th%C3%A9orie-pratique-Initiation-Perfectionnement/dp/2212144709",
+            "slug": "scrum-de-la-theorie-a-la-pratique-initiation-perfectionnement-agilite",
+            "couverture": "https://m.media-amazon.com/images/I/41gNKt0+9cL._SX410_BO1,204,203,200_.jpg",
+            "author": null,
+            "edition": null
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 6,
+        "fields": {
+            "title": "Architecture logicielle propre",
+            "count_pages": 336,
+            "current_page": 0,
+            "ISBN": "2326002679",
+            "more_infos": "https://www.amazon.fr/Architecture-logicielle-propre-Robert-C-Martin/dp/2326002679",
+            "slug": "architecture-logicielle-propre",
+            "couverture": "https://m.media-amazon.com/images/P/B08P7H2WHN.01._SCLZZZZZZZ_SX500_.jpg",
+            "author": 1,
+            "edition": 4
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 7,
+        "fields": {
+            "title": "CODER PROPREMENT",
+            "count_pages": 457,
+            "current_page": 0,
+            "ISBN": "232600227X",
+            "more_infos": "https://www.amazon.fr/Coder-proprement-Robert-C-Martin/dp/232600227X",
+            "slug": "coder-proprement",
+            "couverture": "https://m.media-amazon.com/images/I/417hCFT+RqL._SX406_BO1,204,203,200_.jpg",
+            "author": 1,
+            "edition": 4
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 8,
+        "fields": {
+            "title": "Proprement Codeur. Code de conduite pour dÚveloppeur professionnel",
+            "count_pages": 199,
+            "current_page": 0,
+            "ISBN": "232600289X",
+            "more_infos": "https://www.amazon.fr/Proprement-Codeur-conduite-d%C3%A9veloppeur-professionnel/dp/232600289X/ref=pd_bxgy_sccl_2/262-5604381-8597241?pd_rd_w=xNExZ&content-id=amzn1.sym.3e903e31-26aa-46b7-bc9c-c2062226",
+            "slug": "proprement-codeur-code-de-conduite-pour-developpeur-professionnel",
+            "couverture": "https://m.media-amazon.com/images/P/B09RT9153J.01._SCLZZZZZZZ_SX500_.jpg",
+            "author": 1,
+            "edition": 4
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 9,
+        "fields": {
+            "title": "Agile proprement. Retour Ó l'essentiel",
+            "count_pages": 175,
+            "current_page": 0,
+            "ISBN": "2326002865",
+            "more_infos": "https://www.pearson.fr/fr/book/?GCOI=27440100017670",
+            "slug": "agile-proprement-retour-a-lessentiel",
+            "couverture": "https://m.media-amazon.com/images/I/4160clbbm8L._SX411_BO1,204,203,200_.jpg",
+            "author": 1,
+            "edition": 4
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 10,
+        "fields": {
+            "title": "Installation et configuration d'un serveur internet (BIND, Apache, Nginx, Dovecot, Postfix...)",
+            "count_pages": 453,
+            "current_page": 0,
+            "ISBN": "978-2-409-026",
+            "more_infos": "https://www.editions-eni.fr/livre/installation-et-configuration-d-un-serveur-internet-bind-apache-nginx-dovecot-postfix-9782409026027?gclid=Cj0KCQjw4omaBhDqARIsADXULuXprWT4wHSUlOiYgEwAACj7BCwD5W-nmTHs",
+            "slug": "installation-et-configuration-dun-serveur-internet-bind-apache-nginx-dovecot-postfix",
+            "couverture": "https://www.editions-eni.fr/livre/installation-et-configuration-d-un-serveur-internet-bind-apache-nginx-dovecot-postfix-9782409026027_XL.jpg",
+            "author": 14,
+            "edition": 6
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 11,
+        "fields": {
+            "title": "Les rÚseaux avec Cisco Connaissances approfondies sur les rÚseaux",
+            "count_pages": 542,
+            "current_page": 0,
+            "ISBN": "978-2-409-02",
+            "more_infos": "https://www.editions-eni.fr/livre/les-reseaux-avec-cisco-connaissances-approfondies-sur-les-reseaux-4e-edition-9782409026690",
+            "slug": "les-reseaux-avec-cisco-connaissances-approfondies-sur-les-reseaux",
+            "couverture": "https://www.editions-eni.fr/livre/les-reseaux-avec-cisco-connaissances-approfondies-sur-les-reseaux-4e-edition-9782409026690_XL.jpg",
+            "author": 13,
+            "edition": 6
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 12,
+        "fields": {
+            "title": "RÚseaux informatiques Notions fondamentales (9e Údition) - (Protocoles, Architectures, RÚseaux sans fil...)",
+            "count_pages": 804,
+            "current_page": 0,
+            "ISBN": "978-2-409-035",
+            "more_infos": "https://www.editions-eni.fr/livre/reseaux-informatiques-notions-fondamentales-9e-edition-protocoles-architectures-reseaux-sans-fil-9782409035173",
+            "slug": "reseaux-informatiques-notions-fondamentales-9e-edition-protocoles-architectures-reseaux-sans-fil",
+            "couverture": "https://www.editions-eni.fr/livre/reseaux-informatiques-notions-fondamentales-9e-edition-protocoles-architectures-reseaux-sans-fil-9782409035173_XL.jpg",
+            "author": 12,
+            "edition": 6
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 13,
+        "fields": {
+            "title": "LINUX Ma¯trisez l'administration du systÞme (6e Údition)",
+            "count_pages": 826,
+            "current_page": 0,
+            "ISBN": "978-2-409-025",
+            "more_infos": "https://www.editions-eni.fr/livre/linux-maitrisez-l-administration-du-systeme-6e-edition-9782409025716",
+            "slug": "linux-maitrisez-ladministration-du-systeme-6e-edition",
+            "couverture": "https://www.editions-eni.fr/livre/linux-maitrisez-l-administration-du-systeme-6e-edition-9782409025716_XL.jpg",
+            "author": 11,
+            "edition": 6
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 14,
+        "fields": {
+            "title": "Expressions rÚguliÞres Syntaxe et mise en oeuvre (avec exercices et corrigÚs)",
+            "count_pages": 465,
+            "current_page": 0,
+            "ISBN": "978-2-7460-9",
+            "more_infos": "https://www.editions-eni.fr/livre/expressions-regulieres-syntaxe-et-mise-en-oeuvre-avec-exercices-et-corriges-9782746097124",
+            "slug": "expressions-regulieres-syntaxe-et-mise-en-oeuvre-avec-exercices-et-corriges",
+            "couverture": "https://www.editions-eni.fr/livre/expressions-regulieres-syntaxe-et-mise-en-oeuvre-avec-exercices-et-corriges-9782746097124_XL.jpg",
+            "author": 10,
+            "edition": 6
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 15,
+        "fields": {
+            "title": "UML 2.5 Initiation, exemples et exercices corrigÚs (5e Údition)",
+            "count_pages": 341,
+            "current_page": 0,
+            "ISBN": "978-2-409-024",
+            "more_infos": "https://www.editions-eni.fr/livre/uml-2-5-initiation-exemples-et-exercices-corriges-5e-edition-9782409024085",
+            "slug": "uml-25-initiation-exemples-et-exercices-corriges-5e-edition",
+            "couverture": "https://www.editions-eni.fr/livre/uml-2-5-initiation-exemples-et-exercices-corriges-5e-edition-9782409024085_XL.jpg",
+            "author": 9,
+            "edition": 6
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 16,
+        "fields": {
+            "title": "JavaScript et Angular Des bases du langage au dÚveloppement d'une application web",
+            "count_pages": 413,
+            "current_page": 0,
+            "ISBN": "978-2-409-024",
+            "more_infos": "https://www.editions-eni.fr/livre/javascript-et-angular-des-bases-du-langage-au-developpement-d-une-application-web-9782409024702",
+            "slug": "javascript-et-angular-des-bases-du-langage-au-developpement-dune-application-web",
+            "couverture": "https://www.editions-eni.fr/livre/javascript-et-angular-des-bases-du-langage-au-developpement-d-une-application-web-9782409024702_XL.jpg",
+            "author": 8,
+            "edition": 6
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 17,
+        "fields": {
+            "title": "PostgreSQL Principes de base de l'utilisation de la base de donnÚes",
+            "count_pages": 254,
+            "current_page": 0,
+            "ISBN": "978-2-409-024",
+            "more_infos": "https://www.editions-eni.fr/livre/postgresql-principes-de-base-de-l-utilisation-de-la-base-de-donnees-9782409024504",
+            "slug": "postgresql-principes-de-base-de-lutilisation-de-la-base-de-donnees",
+            "couverture": "https://www.editions-eni.fr/livre/postgresql-principes-de-base-de-l-utilisation-de-la-base-de-donnees-9782409024504_XL.jpg",
+            "author": 7,
+            "edition": 6
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 18,
+        "fields": {
+            "title": "Apprendre la Programmation OrientÚe Objet avec le langage Python (avec exercices pratiques et corrigÚs) (2e Údition)",
+            "count_pages": 282,
+            "current_page": 0,
+            "ISBN": "978-2-409-026",
+            "more_infos": "https://www.editions-eni.fr/livre/apprendre-la-programmation-orientee-objet-avec-le-langage-python-avec-exercices-pratiques-et-corriges-2e-edition-9782409026539",
+            "slug": "apprendre-la-programmation-orientee-objet-avec-le-langage-python-avec-exercices-pratiques-et-corriges-2e-edition",
+            "couverture": "https://www.editions-eni.fr/livre/apprendre-la-programmation-orientee-objet-avec-le-langage-python-avec-exercices-pratiques-et-corriges-2e-edition-9782409026539_XL.jpg",
+            "author": 6,
+            "edition": 6
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 19,
+        "fields": {
+            "title": "Pygame Initiez-vous au dÚveloppement de jeux vidÚo en Python",
+            "count_pages": 20,
+            "current_page": 0,
+            "ISBN": "978-2-409-021",
+            "more_infos": "https://www.editions-eni.fr/livre/pygame-initiez-vous-au-developpement-de-jeux-video-en-python-9782409021688",
+            "slug": "pygame-initiez-vous-au-developpement-de-jeux-video-en-python",
+            "couverture": "https://www.editions-eni.fr/livre/pygame-initiez-vous-au-developpement-de-jeux-video-en-python-9782409021688_XL.jpg",
+            "author": 5,
+            "edition": 6
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 20,
+        "fields": {
+            "title": "Python Petit guide Ó l'usage du dÚveloppeur agile",
+            "count_pages": 192,
+            "current_page": 0,
+            "ISBN": "9782100508839",
+            "more_infos": "https://www.dunod.com/sciences-techniques/python-petit-guide-usage-du-developpeur-agile",
+            "slug": "python-petit-guide-a-lusage-du-developpeur-agile",
+            "couverture": "https://www.dunod.com/sites/default/files/styles/principal_desktop/public/thumbnails/image/9782100508839-T.jpg",
+            "author": 4,
+            "edition": 5
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 21,
+        "fields": {
+            "title": "Django DÚveloppez vos applications web en Python (fonctionnalitÚs essentielles et bonnes pratiques)",
+            "count_pages": 388,
+            "current_page": 0,
+            "ISBN": "978-2-409-024",
+            "more_infos": "https://www.editions-eni.fr/livre/django-developpez-vos-applications-web-en-python-fonctionnalites-essentielles-et-bonnes-pratiques-9782409024177",
+            "slug": "django-developpez-vos-applications-web-en-python-fonctionnalites-essentielles-et-bonnes-pratiques",
+            "couverture": "https://www.editions-eni.fr/livre/django-developpez-vos-applications-web-en-python-fonctionnalites-essentielles-et-bonnes-pratiques-9782409024177_XL.jpg",
+            "author": 21,
+            "edition": 6
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 22,
+        "fields": {
+            "title": "Scripting Python sous Linux DÚveloppez vos outils systÞme",
+            "count_pages": 763,
+            "current_page": 0,
+            "ISBN": "978-2-409-02",
+            "more_infos": "https://www.editions-eni.fr/livre/scripting-python-sous-linux-developpez-vos-outils-systeme-9782409025679",
+            "slug": "scripting-python-sous-linux-developpez-vos-outils-systeme",
+            "couverture": "https://www.editions-eni.fr/livre/scripting-python-sous-linux-developpez-vos-outils-systeme-9782409025679_XL.jpg",
+            "author": 20,
+            "edition": 6
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 23,
+        "fields": {
+            "title": "Docker Concepts fondamentaux et dÚploiement d'applications distribuÚes",
+            "count_pages": 667,
+            "current_page": 0,
+            "ISBN": "978-2-409-028",
+            "more_infos": "https://www.editions-eni.fr/livre/docker-concepts-fondamentaux-et-deploiement-d-applications-distribuees-9782409028588",
+            "slug": "docker-concepts-fondamentaux-et-deploiement-dapplications-distribuees",
+            "couverture": "https://www.editions-eni.fr/livre/docker-concepts-fondamentaux-et-deploiement-d-applications-distribuees-9782409028588_XL.jpg",
+            "author": null,
+            "edition": 6
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 24,
+        "fields": {
+            "title": "Lexipro ; les mots clÚs de l'informatique et d'Internet ; BTS, IUT, licence (Údition bilingue franþais/anglais)",
+            "count_pages": 123,
+            "current_page": 0,
+            "ISBN": "9782749539072",
+            "more_infos": "https://www.librairie-levrailieu.fr/livre/9782749539072-lexipro-les-mots-cles-de-l-informatique-et-d-internet-bts-iut-licence-frederic-rosard/",
+            "slug": "lexipro-les-mots-cles-de-linformatique-et-dinternet-bts-iut-licence-edition-bilingue-francaisanglais",
+            "couverture": "https://cdn.shopify.com/s/files/1/0277/1481/4041/products/41MapJK_rJL._SL800_321x.jpg?v=1663865351",
+            "author": 19,
+            "edition": null
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 25,
+        "fields": {
+            "title": "Ansible GÚrez la configuration de vos serveurs et le dÚploiement de vos applications (2e Údition)",
+            "count_pages": 529,
+            "current_page": 0,
+            "ISBN": "978-2-409-025",
+            "more_infos": "https://www.editions-eni.fr/livre/ansible-gerez-la-configuration-de-vos-serveurs-et-le-deploiement-de-vos-applications-2e-edition-9782409025259",
+            "slug": "ansible-gerez-la-configuration-de-vos-serveurs-et-le-deploiement-de-vos-applications-2e-edition",
+            "couverture": "https://www.editions-eni.fr/livre/ansible-gerez-la-configuration-de-vos-serveurs-et-le-deploiement-de-vos-applications-2e-edition-9782409025259_XL.jpg",
+            "author": 18,
+            "edition": 6
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 26,
+        "fields": {
+            "title": "Git Ma¯trisez la gestion de vos versions (concepts, utilisation et cas pratiques)",
+            "count_pages": 395,
+            "current_page": 0,
+            "ISBN": "978-2-409-031",
+            "more_infos": "https://www.editions-eni.fr/livre/git-maitrisez-la-gestion-de-vos-versions-concepts-utilisation-et-cas-pratiques-3e-edition-9782409031052",
+            "slug": "git-maitrisez-la-gestion-de-vos-versions-concepts-utilisation-et-cas-pratiques",
+            "couverture": "https://www.editions-eni.fr/livre/git-maitrisez-la-gestion-de-vos-versions-concepts-utilisation-et-cas-pratiques-3e-edition-9782409031052_XL.jpg",
+            "author": 17,
+            "edition": 6
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 27,
+        "fields": {
+            "title": "DevOps IntÚgrez et dÚployez en continu (avec exemple clÚs en main)",
+            "count_pages": 364,
+            "current_page": 0,
+            "ISBN": "978-2-409-017",
+            "more_infos": "https://www.editions-eni.fr/livre/devops-integrez-et-deployez-en-continu-avec-exemple-cles-en-main-9782409017155",
+            "slug": "devops-integrez-et-deployez-en-continu-avec-exemple-cles-en-main",
+            "couverture": "https://www.editions-eni.fr/livre/devops-integrez-et-deployez-en-continu-avec-exemple-cles-en-main-9782409017155_XL.jpg",
+            "author": 16,
+            "edition": 6
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 28,
+        "fields": {
+            "title": "Les rÚseaux (2░ ╔d.) Principes fondamentaux",
+            "count_pages": 208,
+            "current_page": 0,
+            "ISBN": "2746246597",
+            "more_infos": "https://www.lavoisier.fr/livre/informatique/les-reseaux-principes-fondamentaux-2e-ed/rolin/descriptif-9782746246591",
+            "slug": "les-reseaux-2-ed-principes-fondamentaux",
+            "couverture": "https://images.lavoisier.net/couvertures/1316942826.jpg",
+            "author": null,
+            "edition": 7
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 29,
+        "fields": {
+            "title": "IPv6 - ThÚorie et pratique",
+            "count_pages": 467,
+            "current_page": 0,
+            "ISBN": "284177337X",
+            "more_infos": "https://www.amazon.fr/IPv6-Th%C3%A9orie-pratique-Gis%C3%A8le-Cizault/dp/284177337X",
+            "slug": "ipv6-theorie-et-pratique",
+            "couverture": "https://m.media-amazon.com/images/I/41JX4JG8RQL._SX341_BO1,204,203,200_.jpg",
+            "author": 15,
+            "edition": null
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 30,
+        "fields": {
+            "title": "Apprendre la programmation web avec Python et Django: Principes et bonnes pratiques pour les sites web dynamiques",
+            "count_pages": 368,
+            "current_page": 0,
+            "ISBN": "2212675151",
+            "more_infos": "https://www.amazon.fr/Apprendre-programmation-avec-Python-Django/dp/2212675151/ref=asc_df_2212675151/?tag=googshopfr-21&linkCode=df0&hvadid=227996157743&hvpos=&hvnetw=g&hvrand=13494519384469402903&hvp",
+            "slug": "apprendre-la-programmation-web-avec-python-et-django-principes-et-bonnes-pratiques-pour-les-sites-web-dynamiques",
+            "couverture": "https://m.media-amazon.com/images/P/B078WHRJPB.01._SCLZZZZZZZ_SX500_.jpg",
+            "author": null,
+            "edition": 3
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 31,
+        "fields": {
+            "title": "Software Craftsmanship L'art du code et de l'agilitÚ technique en entreprise",
+            "count_pages": 282,
+            "current_page": 0,
+            "ISBN": "978-2-409-021",
+            "more_infos": "https://www.editions-eni.fr/livre/software-craftsmanship-l-art-du-code-et-de-l-agilite-technique-en-entreprise-9782409021534",
+            "slug": "software-craftsmanship-lart-du-code-et-de-lagilite-technique-en-entreprise",
+            "couverture": "https://www.editions-eni.fr/livre/software-craftsmanship-l-art-du-code-et-de-l-agilite-technique-en-entreprise-9782409021534_XL.jpg",
+            "author": 28,
+            "edition": 6
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 32,
+        "fields": {
+            "title": "Algorithmique Raisonner pour concevoir",
+            "count_pages": 585,
+            "current_page": 0,
+            "ISBN": "978-2-409-024",
+            "more_infos": "https://www.editions-eni.fr/livre/algorithmique-raisonner-pour-concevoir-3e-edition-9782409024412",
+            "slug": "algorithmique-raisonner-pour-concevoir",
+            "couverture": "https://www.editions-eni.fr/livre/algorithmique-raisonner-pour-concevoir-3e-edition-9782409024412_XL.jpg",
+            "author": 27,
+            "edition": 6
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 33,
+        "fields": {
+            "title": "DÚveloppement et architecture des Applications Web Modernes Retrouver les fondamentaux",
+            "count_pages": 608,
+            "current_page": 0,
+            "ISBN": "978-2-409-029",
+            "more_infos": "https://www.editions-eni.fr/livre/developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-9782409029523",
+            "slug": "developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux",
+            "couverture": "https://www.editions-eni.fr/livre/developpement-et-architecture-des-applications-web-modernes-retrouver-les-fondamentaux-9782409029523_XL.jpg",
+            "author": 26,
+            "edition": 6
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 34,
+        "fields": {
+            "title": "Architecture logicielle Pour une approche organisationnelle, fonctionnelle et technique",
+            "count_pages": 474,
+            "current_page": 0,
+            "ISBN": "978-2-7460-9",
+            "more_infos": "https://www.editions-eni.fr/livre/architecture-logicielle-pour-une-approche-organisationnelle-fonctionnelle-et-technique-2e-edition-9782746099210",
+            "slug": "architecture-logicielle-pour-une-approche-organisationnelle-fonctionnelle-et-technique",
+            "couverture": "https://www.editions-eni.fr/livre/architecture-logicielle-pour-une-approche-organisationnelle-fonctionnelle-et-technique-2e-edition-9782746099210_XL.jpg",
+            "author": 25,
+            "edition": 6
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 35,
+        "fields": {
+            "title": "UML au service de l'analyse des mÚtiers (Business Analysis)",
+            "count_pages": 0,
+            "current_page": 0,
+            "ISBN": "978-2-409-000",
+            "more_infos": "https://www.editions-eni.fr/livre/uml-au-service-de-l-analyse-des-metiers-business-analysis-9782409000973",
+            "slug": "uml-au-service-de-lanalyse-des-metiers-business-analysis",
+            "couverture": "https://www.editions-eni.fr/livre/uml-au-service-de-l-analyse-des-metiers-business-analysis-9782409000973_XL.jpg",
+            "author": 24,
+            "edition": 6
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 36,
+        "fields": {
+            "title": "Pilotage d'un systÞme d'information MÚthode et bonnes pratiques",
+            "count_pages": 270,
+            "current_page": 0,
+            "ISBN": "978-2-409-029",
+            "more_infos": "https://www.editions-eni.fr/livre/pilotage-d-un-systeme-d-information-methode-et-bonnes-pratiques-2e-edition-9782409029059",
+            "slug": "pilotage-dun-systeme-dinformation-methode-et-bonnes-pratiques",
+            "couverture": "https://www.editions-eni.fr/livre/pilotage-d-un-systeme-d-information-methode-et-bonnes-pratiques-2e-edition-9782409029059_XL.jpg",
+            "author": 23,
+            "edition": 6
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 37,
+        "fields": {
+            "title": "ITIL« 4 Comprendre la dÚmarche et adopter les bonnes pratiques",
+            "count_pages": 400,
+            "current_page": 0,
+            "ISBN": "978-2-409-036",
+            "more_infos": "https://www.editions-eni.fr/livre/itil-4-comprendre-la-demarche-et-adopter-les-bonnes-pratiques-2e-edition-9782409036354",
+            "slug": "itil-4-comprendre-la-demarche-et-adopter-les-bonnes-pratiques",
+            "couverture": "https://www.editions-eni.fr/livre/itil-4-comprendre-la-demarche-et-adopter-les-bonnes-pratiques-2e-edition-9782409036354_XL.jpg",
+            "author": 22,
+            "edition": 6
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 38,
+        "fields": {
+            "title": "Refactoring Comment amÚliorer le code existant",
+            "count_pages": 432,
+            "current_page": 0,
+            "ISBN": "9782100801169",
+            "more_infos": "https://www.dunod.com/sciences-techniques/refactoring-comment-ameliorer-code-existant?gclid=Cj0KCQjw4omaBhDqARIsADXULuUII19okyMaBDqyVrAO6yKMizqcgwSB1KLgtjnspgFgUjt5jl5Z_EEaAuoUEALw_wcB",
+            "slug": "refactoring-comment-ameliorer-le-code-existant",
+            "couverture": "https://www.dunod.com/sites/default/files/styles/principal_desktop/public/thumbnails/image/9782100801169-001-X.jpeg",
+            "author": 29,
+            "edition": 5
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 39,
+        "fields": {
+            "title": "Le story mapping Visualisez vos user stories pour dÚvelopper le bon produit",
+            "count_pages": 0,
+            "current_page": 0,
+            "ISBN": "9782100810284",
+            "more_infos": "https://www.dunod.com/sciences-techniques/story-mapping-visualisez-vos-user-stories-pour-developper-bon-produit-0",
+            "slug": "le-story-mapping-visualisez-vos-user-stories-pour-developper-le-bon-produit",
+            "couverture": "https://www.dunod.com/sites/default/files/styles/principal_desktop/public/thumbnails/image/9782100810284-001-X.jpeg",
+            "author": 30,
+            "edition": 5
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 40,
+        "fields": {
+            "title": "Le web sÚmantique Comment lier les donnÚes et les schÚmas sur le web ?",
+            "count_pages": 224,
+            "current_page": 0,
+            "ISBN": "9782100572946",
+            "more_infos": "https://www.dunod.com/sciences-techniques/web-semantique-comment-lier-donnees-et-schemas-sur-web",
+            "slug": "le-web-semantique-comment-lier-les-donnees-et-les-schemas-sur-le-web",
+            "couverture": "https://www.dunod.com/sites/default/files/styles/principal_desktop/public/thumbnails/image/9782100572946-T.jpg",
+            "author": null,
+            "edition": 5
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 41,
+        "fields": {
+            "title": "Programmez en orientÚ objet en PHP",
+            "count_pages": 474,
+            "current_page": 0,
+            "ISBN": "2212144725",
+            "more_infos": "https://www.editions-eyrolles.com/Livre/9782212144727/programmez-en-oriente-objet-en-php",
+            "slug": "programmez-en-oriente-objet-en-php",
+            "couverture": "https://servimg.eyrolles.com/static/media/4727/9782212144727_internet_w290.jpg",
+            "author": 33,
+            "edition": 3
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 42,
+        "fields": {
+            "title": "Apprenez Ó  programmer en Python",
+            "count_pages": 520,
+            "current_page": 0,
+            "ISBN": "241600655X",
+            "more_infos": "https://www.editions-eyrolles.com/Livre/9782416006555/apprenez-a-programmer-en-python",
+            "slug": "apprenez-a-programmer-en-python",
+            "couverture": "https://servimg.eyrolles.com/static/media/6555/9782416006555_internet_w290.jpg",
+            "author": 32,
+            "edition": 3
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 43,
+        "fields": {
+            "title": "RÚalisez votre site web avec HTML 5 et CSS 3",
+            "count_pages": 364,
+            "current_page": 0,
+            "ISBN": "2-212-67476-7",
+            "more_infos": "https://www.editions-eyrolles.com/Livre/9782212674767/realisez-votre-site-web-avec-html-5-et-css-3",
+            "slug": "realisez-votre-site-web-avec-html-5-et-css-3",
+            "couverture": "https://servimg.eyrolles.com/static/media/4767/9782212674767_internet_w290.jpg",
+            "author": 31,
+            "edition": 3
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 44,
+        "fields": {
+            "title": "Apprenez Ó programmer en C",
+            "count_pages": 528,
+            "current_page": 0,
+            "ISBN": "10-90085-87-7",
+            "more_infos": "https://www.editions-eyrolles.com/Livre/9791090085879/apprenez-a-programmer-en-c",
+            "slug": "apprenez-a-programmer-en-c",
+            "couverture": "https://servimg.eyrolles.com/static/media/5879/9791090085879_internet_w290.jpg",
+            "author": 31,
+            "edition": 3
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 45,
+        "fields": {
+            "title": "Administrez vos bases de donnÚes avec MySQL",
+            "count_pages": 502,
+            "current_page": 0,
+            "ISBN": "979-109008567",
+            "more_infos": "https://www.amazon.fr/Administrez-bases-donn%C3%A9es-avec-MySQL/dp/B00KR7SI3C/ref=sr_1_1?qid=1665334348&refinements=p_27%3AChantal+Gribaumont&s=books&sr=1-1",
+            "slug": "administrez-vos-bases-de-donnees-avec-mysql",
+            "couverture": "https://m.media-amazon.com/images/I/31MfJsXLVSL._SX346_BO1,204,203,200_.jpg",
+            "author": 34,
+            "edition": 3
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 46,
+        "fields": {
+            "title": "Programmer en s'amusant avec Python 2e Údition Pour les Nuls",
+            "count_pages": 320,
+            "current_page": 0,
+            "ISBN": "9782412039564",
+            "more_infos": "https://www.pourlesnuls.fr/livres/informatique/programmer-en-s-amusant-avec-python-2e-edition-pour-les-nuls-9782412039564",
+            "slug": "programmer-en-samusant-avec-python-2e-edition-pour-les-nuls",
+            "couverture": "https://www.pourlesnuls.fr/sites/pourlesnuls.edinul-pw01.msp.fr.clara.net/files/styles/visuel_fiche_livre/public/9782412039564.jpg?itok=Co6xWVhH",
+            "author": null,
+            "edition": null
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 47,
+        "fields": {
+            "title": "Python & JavaScript pour les Nuls, mÚgapoche",
+            "count_pages": 704,
+            "current_page": 0,
+            "ISBN": "9782412057919",
+            "more_infos": "https://www.pourlesnuls.fr/livres/informatique/python-javascript-pour-les-nuls-megapoche-9782412057919",
+            "slug": "python-javascript-pour-les-nuls-megapoche",
+            "couverture": "https://www.pourlesnuls.fr/sites/pourlesnuls.edinul-pw01.msp.fr.clara.net/files/styles/visuel_fiche_livre/public/9782412057919.jpg?itok=QLG6qFtA",
+            "author": null,
+            "edition": null
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 48,
+        "fields": {
+            "title": "Programmer en s'amusant avec JavaScript 2e Úd pour les Nuls",
+            "count_pages": 360,
+            "current_page": 0,
+            "ISBN": "9782412045152",
+            "more_infos": "https://www.pourlesnuls.fr/livres/informatique/programmer-en-s-amusant-avec-javascript-2e-ed-pour-les-nuls-9782412045152",
+            "slug": "programmer-en-samusant-avec-javascript-2e-ed-pour-les-nuls",
+            "couverture": "https://www.pourlesnuls.fr/sites/pourlesnuls.edinul-pw01.msp.fr.clara.net/files/styles/visuel_fiche_livre/public/9782412045152.jpg?itok=7j8Mau6Z",
+            "author": null,
+            "edition": null
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 49,
+        "fields": {
+            "title": "WordPress pour les Nuls, grand format",
+            "count_pages": 384,
+            "current_page": 0,
+            "ISBN": "9782412068762",
+            "more_infos": "https://www.pourlesnuls.fr/livres/informatique/wordpress-pour-les-nuls-grand-format-5-ed-9782412068762",
+            "slug": "wordpress-pour-les-nuls-grand-format",
+            "couverture": "https://www.pourlesnuls.fr/sites/pourlesnuls.edinul-pw01.msp.fr.clara.net/files/styles/visuel_fiche_livre/public/9782412068762.jpg?itok=64hPCLqt",
+            "author": null,
+            "edition": null
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 50,
+        "fields": {
+            "title": "Design patterns TÛte la premiÞre",
+            "count_pages": 639,
+            "current_page": 0,
+            "ISBN": "2841773507",
+            "more_infos": "https://www.amazon.fr/Design-patterns-Eric-Freeman/dp/2841773507/ref=sr_1_13?keywords=Design+patterns+t%C3%AAte+la+premi%C3%A8re&qid=1665335070&qu=eyJxc2MiOiIxLjIzIiwicXNhIjoiMS4wMCIsInFzcCI6IjAuMDAif",
+            "slug": "design-patterns",
+            "couverture": "https://m.media-amazon.com/images/I/516XECZXY3L._SX403_BO1,204,203,200_.jpg",
+            "author": null,
+            "edition": 8
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 51,
+        "fields": {
+            "title": "HTML avec CSS et XHTML TÛte la premiÞre",
+            "count_pages": 657,
+            "current_page": 0,
+            "ISBN": "2841774139",
+            "more_infos": "https://www.amazon.fr/HTML-avec-XHTML-T%C3%AAte-premi%C3%A8re/dp/2841774139/ref=sr_1_7?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=VTK02PTQY0MA&keywords=html+t%C3%AAte+la+premi%C3%A8re&qid=1665335",
+            "slug": "html-avec-css-et-xhtml-tete-la-premiere",
+            "couverture": "https://m.media-amazon.com/images/I/51CZinTfREL._SX426_BO1,204,203,200_.jpg",
+            "author": null,
+            "edition": 8
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 52,
+        "fields": {
+            "title": "SQL TÛte la premiÞre",
+            "count_pages": 574,
+            "current_page": 0,
+            "ISBN": "2841774708",
+            "more_infos": "https://www.amazon.fr/SQL-Lynn-Beighley/dp/2841774708/ref=sr_1_20?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2KK5GFDQA3BOS&keywords=sql+t%C3%AAte+la+premi%C3%A8re&qid=1665335392&qu=eyJxc2MiOiIwLj",
+            "slug": "sql-tete-la-rpemiere",
+            "couverture": "https://m.media-amazon.com/images/I/51f36gvhaZL._SX427_BO1,204,203,200_.jpg",
+            "author": null,
+            "edition": 8
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 53,
+        "fields": {
+            "title": "Le web mobile tÛte la premiÞre",
+            "count_pages": 468,
+            "current_page": 0,
+            "ISBN": "2100581791",
+            "more_infos": "https://www.amazon.fr/web-mobile-t%C3%AAte-premi%C3%A8re/dp/2100581791/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2L5IJVRYSF27Q&keywords=web+mobile+t%C3%AAte+la+premi%C3%A8re&qid=16653",
+            "slug": "le-web-mobile-tete-la-premiere",
+            "couverture": "https://m.media-amazon.com/images/I/51u3qOd2QjL._SX394_BO1,204,203,200_.jpg",
+            "author": null,
+            "edition": 8
+        }
+    },
+    {
+        "model": "app_books.book",
+        "pk": 54,
+        "fields": {
+            "title": "Analyse et conception orientÚes objet TÛte la premiÞre",
+            "count_pages": 600,
+            "current_page": 0,
+            "ISBN": "2841774317",
+            "more_infos": "https://www.amazon.fr/Analyse-conception-orient%C3%A9es-objet-McLaughlin/dp/2841774317/ref=sr_1_27?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=LAMU7EXR4VIC&keywords=analyse+et+conception+t%C3%AAte",
+            "slug": "analyse-et-conception-orientees-objet-tete-la-premiere",
+            "couverture": "https://m.media-amazon.com/images/I/51tN+T0B9VL._SX430_BO1,204,203,200_.jpg",
+            "author": null,
+            "edition": 8
+        }
+    },
+    {
+        "model": "app_books.category",
+        "pk": 1,
+        "fields": {
+            "name": "langage",
+            "slug": "langage",
+            "category": [
+                19
+            ]
+        }
+    },
+    {
+        "model": "app_books.category",
+        "pk": 2,
+        "fields": {
+            "name": "python",
+            "slug": "python",
+            "category": [
+                42,
+                46,
+                18,
+                19,
+                21,
+                30
+            ]
+        }
+    },
+    {
+        "model": "app_books.category",
+        "pk": 3,
+        "fields": {
+            "name": "reseaux",
+            "slug": "reseaux",
+            "category": [
+                10,
+                11,
+                12,
+                28,
+                29
+            ]
+        }
+    },
+    {
+        "model": "app_books.category",
+        "pk": 4,
+        "fields": {
+            "name": "linux",
+            "slug": "linux",
+            "category": [
+                13,
+                22
+            ]
+        }
+    }
+]
