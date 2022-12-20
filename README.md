@@ -77,6 +77,8 @@ pipenv run pytest
 pipenv run pytest --cov=. --cov-report html
 ```
 # Commandes docker
+renommer le fichier .env_example en .env et y mettre les variables d'environnement.
+
 Sous windows:lancer docker-deskop
 ```
 docker-compose build
