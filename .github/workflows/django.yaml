@@ -10,10 +10,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      POSTGRES_USER: veille
-      POSTGRES_PASSWORD: veille
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
       POSTGRES_HOST: localhost
-      POSTGRES_DB: veille
+      POSTGRES_DB: postgres
       POSTGRES_PORT: 5432
       DJANGO_SECRET_KEY: test_key_django
     services:
