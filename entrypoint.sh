@@ -14,6 +14,6 @@ fi
 python manage.py flush --no-input
 python manage.py migrate
 python manage.py createsuperuser --email="$EMAIL_USER" --noinput
-python manage.py loaddata database/veille_backup.json
+python manage.py loaddata books_backup.json
 
 exec "$@"

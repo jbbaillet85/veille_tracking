@@ -91,7 +91,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTH_USER_MODEL = "app_user.User"
 LOGIN_REDIRECT_URL = "homepage"
-
+LOGIN_URL = "login"
 LANGUAGE_CODE = "fr-fr"
 TIME_ZONE = "UTC"
 USE_I18N = True

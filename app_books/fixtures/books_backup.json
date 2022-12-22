@@ -3,7 +3,7 @@
         "model": "app_books.edition",
         "pk": 1,
         "fields": {
-            "name": "Editions CyberdÚfenseur",
+            "name": "Editions Cyberdefenseur",
             "slug": "editions-cyberdefenseur"
         }
     },
@@ -168,7 +168,7 @@
         "pk": 11,
         "fields": {
             "name": "Rohaut",
-            "lastname": "SÚbastien",
+            "lastname": "Sebastien",
             "contact": "https://www.linkedin.com/in/s%C3%A9bastien-rohaut-808a4366/",
             "slug": "rohaut-sebastien"
         }
@@ -237,7 +237,7 @@
         "model": "app_books.author",
         "pk": 18,
         "fields": {
-            "name": "PerrÚ",
+            "name": "Perre",
             "lastname": "Yannig",
             "contact": "https://www.linkedin.com/in/yannigperre/",
             "slug": "perre-yannig"
@@ -248,7 +248,7 @@
         "pk": 19,
         "fields": {
             "name": "Rosard",
-            "lastname": "FrÚdÚric",
+            "lastname": "Frederic",
             "contact": "https://www.linkedin.com/in/jp-gouigoux/",
             "slug": "frederic-rosard"
         }
@@ -317,7 +317,7 @@
         "model": "app_books.author",
         "pk": 26,
         "fields": {
-            "name": "MacÚ",
+            "name": "Mace",
             "lastname": "Noel",
             "contact": "https://www.linkedin.com/in/noelmace/",
             "slug": "mace-noel"
@@ -422,7 +422,7 @@
         "model": "app_books.book",
         "pk": 2,
         "fields": {
-            "title": "Le gÚnie logiciel orientÚ objet: Une approche fondÚe sur les cas d'utilisation",
+            "title": "Le genie logiciel oriente objet: Une approche fondÚe sur les cas d'utilisation",
             "count_pages": 536,
             "current_page": 0,
             "ISBN": "2879080428",
@@ -467,7 +467,7 @@
         "model": "app_books.book",
         "pk": 5,
         "fields": {
-            "title": "Scrum, de la thÚorie Ó la pratique: Initiation. Perfectionnement. AgilitÚ.",
+            "title": "Scrum, de la theorie a la pratique: Initiation. Perfectionnement. Agilite.",
             "count_pages": 248,
             "current_page": 0,
             "ISBN": "2212144709",
@@ -527,7 +527,7 @@
         "model": "app_books.book",
         "pk": 9,
         "fields": {
-            "title": "Agile proprement. Retour Ó l'essentiel",
+            "title": "Agile proprement. Retour a l'essentiel",
             "count_pages": 175,
             "current_page": 0,
             "ISBN": "2326002865",
@@ -557,7 +557,7 @@
         "model": "app_books.book",
         "pk": 11,
         "fields": {
-            "title": "Les rÚseaux avec Cisco Connaissances approfondies sur les rÚseaux",
+            "title": "Les reseaux avec Cisco Connaissances approfondies sur les reseaux",
             "count_pages": 542,
             "current_page": 0,
             "ISBN": "978-2-409-02",
@@ -572,7 +572,7 @@
         "model": "app_books.book",
         "pk": 12,
         "fields": {
-            "title": "RÚseaux informatiques Notions fondamentales (9e Údition) - (Protocoles, Architectures, RÚseaux sans fil...)",
+            "title": "Reseaux informatiques Notions fondamentales (9e edition) - (Protocoles, Architectures, Reseaux sans fil...)",
             "count_pages": 804,
             "current_page": 0,
             "ISBN": "978-2-409-035",
@@ -587,7 +587,7 @@
         "model": "app_books.book",
         "pk": 13,
         "fields": {
-            "title": "LINUX Ma¯trisez l'administration du systÞme (6e Údition)",
+            "title": "LINUX Maitrisez l'administration du systeme (6e edition)",
             "count_pages": 826,
             "current_page": 0,
             "ISBN": "978-2-409-025",
@@ -602,7 +602,7 @@
         "model": "app_books.book",
         "pk": 14,
         "fields": {
-            "title": "Expressions rÚguliÞres Syntaxe et mise en oeuvre (avec exercices et corrigÚs)",
+            "title": "Expressions regulieres Syntaxe et mise en oeuvre (avec exercices et corriges)",
             "count_pages": 465,
             "current_page": 0,
             "ISBN": "978-2-7460-9",
@@ -617,7 +617,7 @@
         "model": "app_books.book",
         "pk": 15,
         "fields": {
-            "title": "UML 2.5 Initiation, exemples et exercices corrigÚs (5e Údition)",
+            "title": "UML 2.5 Initiation, exemples et exercices corriges (5e edition)",
             "count_pages": 341,
             "current_page": 0,
             "ISBN": "978-2-409-024",
@@ -632,7 +632,7 @@
         "model": "app_books.book",
         "pk": 16,
         "fields": {
-            "title": "JavaScript et Angular Des bases du langage au dÚveloppement d'une application web",
+            "title": "JavaScript et Angular Des bases du langage au developpement d'une application web",
             "count_pages": 413,
             "current_page": 0,
             "ISBN": "978-2-409-024",
@@ -647,7 +647,7 @@
         "model": "app_books.book",
         "pk": 17,
         "fields": {
-            "title": "PostgreSQL Principes de base de l'utilisation de la base de donnÚes",
+            "title": "PostgreSQL Principes de base de l'utilisation de la base de donnees",
             "count_pages": 254,
             "current_page": 0,
             "ISBN": "978-2-409-024",
@@ -662,7 +662,7 @@
         "model": "app_books.book",
         "pk": 18,
         "fields": {
-            "title": "Apprendre la Programmation OrientÚe Objet avec le langage Python (avec exercices pratiques et corrigÚs) (2e Údition)",
+            "title": "Apprendre la Programmation Orientee Objet avec le langage Python (avec exercices pratiques et corriges) (2e edition)",
             "count_pages": 282,
             "current_page": 0,
             "ISBN": "978-2-409-026",
@@ -677,7 +677,7 @@
         "model": "app_books.book",
         "pk": 19,
         "fields": {
-            "title": "Pygame Initiez-vous au dÚveloppement de jeux vidÚo en Python",
+            "title": "Pygame Initiez-vous au developpement de jeux video en Python",
             "count_pages": 20,
             "current_page": 0,
             "ISBN": "978-2-409-021",
@@ -692,7 +692,7 @@
         "model": "app_books.book",
         "pk": 20,
         "fields": {
-            "title": "Python Petit guide Ó l'usage du dÚveloppeur agile",
+            "title": "Python Petit guide a l'usage du developpeur agile",
             "count_pages": 192,
             "current_page": 0,
             "ISBN": "9782100508839",
@@ -707,7 +707,7 @@
         "model": "app_books.book",
         "pk": 21,
         "fields": {
-            "title": "Django DÚveloppez vos applications web en Python (fonctionnalitÚs essentielles et bonnes pratiques)",
+            "title": "Django Developpez vos applications web en Python (fonctionnalites essentielles et bonnes pratiques)",
             "count_pages": 388,
             "current_page": 0,
             "ISBN": "978-2-409-024",
@@ -722,7 +722,7 @@
         "model": "app_books.book",
         "pk": 22,
         "fields": {
-            "title": "Scripting Python sous Linux DÚveloppez vos outils systÞme",
+            "title": "Scripting Python sous Linux Developpez vos outils systeme",
             "count_pages": 763,
             "current_page": 0,
             "ISBN": "978-2-409-02",
@@ -737,7 +737,7 @@
         "model": "app_books.book",
         "pk": 23,
         "fields": {
-            "title": "Docker Concepts fondamentaux et dÚploiement d'applications distribuÚes",
+            "title": "Docker Concepts fondamentaux et deploiement d'applications distribuees",
             "count_pages": 667,
             "current_page": 0,
             "ISBN": "978-2-409-028",
@@ -752,7 +752,7 @@
         "model": "app_books.book",
         "pk": 24,
         "fields": {
-            "title": "Lexipro ; les mots clÚs de l'informatique et d'Internet ; BTS, IUT, licence (Údition bilingue franþais/anglais)",
+            "title": "Lexipro ; les mots cles de l'informatique et d'Internet ; BTS, IUT, licence (edition bilingue francais/anglais)",
             "count_pages": 123,
             "current_page": 0,
             "ISBN": "9782749539072",
@@ -767,7 +767,7 @@
         "model": "app_books.book",
         "pk": 25,
         "fields": {
-            "title": "Ansible GÚrez la configuration de vos serveurs et le dÚploiement de vos applications (2e Údition)",
+            "title": "Ansible Gerez la configuration de vos serveurs et le deploiement de vos applications (2e edition)",
             "count_pages": 529,
             "current_page": 0,
             "ISBN": "978-2-409-025",
@@ -782,7 +782,7 @@
         "model": "app_books.book",
         "pk": 26,
         "fields": {
-            "title": "Git Ma¯trisez la gestion de vos versions (concepts, utilisation et cas pratiques)",
+            "title": "Git Maitrisez la gestion de vos versions (concepts, utilisation et cas pratiques)",
             "count_pages": 395,
             "current_page": 0,
             "ISBN": "978-2-409-031",
@@ -797,7 +797,7 @@
         "model": "app_books.book",
         "pk": 27,
         "fields": {
-            "title": "DevOps IntÚgrez et dÚployez en continu (avec exemple clÚs en main)",
+            "title": "DevOps Integrez et deployez en continu (avec exemple cles en main)",
             "count_pages": 364,
             "current_page": 0,
             "ISBN": "978-2-409-017",
@@ -812,7 +812,7 @@
         "model": "app_books.book",
         "pk": 28,
         "fields": {
-            "title": "Les rÚseaux (2░ ╔d.) Principes fondamentaux",
+            "title": "Les reseaux (2 edition.) Principes fondamentaux",
             "count_pages": 208,
             "current_page": 0,
             "ISBN": "2746246597",
@@ -827,7 +827,7 @@
         "model": "app_books.book",
         "pk": 29,
         "fields": {
-            "title": "IPv6 - ThÚorie et pratique",
+            "title": "IPv6 - Theorie et pratique",
             "count_pages": 467,
             "current_page": 0,
             "ISBN": "284177337X",
@@ -857,7 +857,7 @@
         "model": "app_books.book",
         "pk": 31,
         "fields": {
-            "title": "Software Craftsmanship L'art du code et de l'agilitÚ technique en entreprise",
+            "title": "Software Craftsmanship L'art du code et de l'agilite technique en entreprise",
             "count_pages": 282,
             "current_page": 0,
             "ISBN": "978-2-409-021",
@@ -887,7 +887,7 @@
         "model": "app_books.book",
         "pk": 33,
         "fields": {
-            "title": "DÚveloppement et architecture des Applications Web Modernes Retrouver les fondamentaux",
+            "title": "Developpement et architecture des Applications Web Modernes Retrouver les fondamentaux",
             "count_pages": 608,
             "current_page": 0,
             "ISBN": "978-2-409-029",
@@ -917,7 +917,7 @@
         "model": "app_books.book",
         "pk": 35,
         "fields": {
-            "title": "UML au service de l'analyse des mÚtiers (Business Analysis)",
+            "title": "UML au service de l'analyse des metiers (Business Analysis)",
             "count_pages": 0,
             "current_page": 0,
             "ISBN": "978-2-409-000",
@@ -932,7 +932,7 @@
         "model": "app_books.book",
         "pk": 36,
         "fields": {
-            "title": "Pilotage d'un systÞme d'information MÚthode et bonnes pratiques",
+            "title": "Pilotage d'un systeme d'information Methode et bonnes pratiques",
             "count_pages": 270,
             "current_page": 0,
             "ISBN": "978-2-409-029",
@@ -947,7 +947,7 @@
         "model": "app_books.book",
         "pk": 37,
         "fields": {
-            "title": "ITIL« 4 Comprendre la dÚmarche et adopter les bonnes pratiques",
+            "title": "ITIL« 4 Comprendre la demarche et adopter les bonnes pratiques",
             "count_pages": 400,
             "current_page": 0,
             "ISBN": "978-2-409-036",
@@ -962,7 +962,7 @@
         "model": "app_books.book",
         "pk": 38,
         "fields": {
-            "title": "Refactoring Comment amÚliorer le code existant",
+            "title": "Refactoring Comment ameliorer le code existant",
             "count_pages": 432,
             "current_page": 0,
             "ISBN": "9782100801169",
@@ -977,7 +977,7 @@
         "model": "app_books.book",
         "pk": 39,
         "fields": {
-            "title": "Le story mapping Visualisez vos user stories pour dÚvelopper le bon produit",
+            "title": "Le story mapping Visualisez vos user stories pour developper le bon produit",
             "count_pages": 0,
             "current_page": 0,
             "ISBN": "9782100810284",
@@ -992,7 +992,7 @@
         "model": "app_books.book",
         "pk": 40,
         "fields": {
-            "title": "Le web sÚmantique Comment lier les donnÚes et les schÚmas sur le web ?",
+            "title": "Le web semantique Comment lier les donnees et les schemas sur le web ?",
             "count_pages": 224,
             "current_page": 0,
             "ISBN": "9782100572946",
@@ -1007,7 +1007,7 @@
         "model": "app_books.book",
         "pk": 41,
         "fields": {
-            "title": "Programmez en orientÚ objet en PHP",
+            "title": "Programmez en oriente objet en PHP",
             "count_pages": 474,
             "current_page": 0,
             "ISBN": "2212144725",
@@ -1022,7 +1022,7 @@
         "model": "app_books.book",
         "pk": 42,
         "fields": {
-            "title": "Apprenez Ó  programmer en Python",
+            "title": "Apprenez a  programmer en Python",
             "count_pages": 520,
             "current_page": 0,
             "ISBN": "241600655X",
@@ -1037,7 +1037,7 @@
         "model": "app_books.book",
         "pk": 43,
         "fields": {
-            "title": "RÚalisez votre site web avec HTML 5 et CSS 3",
+            "title": "Realisez votre site web avec HTML 5 et CSS 3",
             "count_pages": 364,
             "current_page": 0,
             "ISBN": "2-212-67476-7",
@@ -1052,7 +1052,7 @@
         "model": "app_books.book",
         "pk": 44,
         "fields": {
-            "title": "Apprenez Ó programmer en C",
+            "title": "Apprenez a programmer en C",
             "count_pages": 528,
             "current_page": 0,
             "ISBN": "10-90085-87-7",
@@ -1067,7 +1067,7 @@
         "model": "app_books.book",
         "pk": 45,
         "fields": {
-            "title": "Administrez vos bases de donnÚes avec MySQL",
+            "title": "Administrez vos bases de donnees avec MySQL",
             "count_pages": 502,
             "current_page": 0,
             "ISBN": "979-109008567",
@@ -1082,7 +1082,7 @@
         "model": "app_books.book",
         "pk": 46,
         "fields": {
-            "title": "Programmer en s'amusant avec Python 2e Údition Pour les Nuls",
+            "title": "Programmer en s'amusant avec Python 2e edition Pour les Nuls",
             "count_pages": 320,
             "current_page": 0,
             "ISBN": "9782412039564",
@@ -1097,7 +1097,7 @@
         "model": "app_books.book",
         "pk": 47,
         "fields": {
-            "title": "Python & JavaScript pour les Nuls, mÚgapoche",
+            "title": "Python & JavaScript pour les Nuls, megapoche",
             "count_pages": 704,
             "current_page": 0,
             "ISBN": "9782412057919",
@@ -1112,7 +1112,7 @@
         "model": "app_books.book",
         "pk": 48,
         "fields": {
-            "title": "Programmer en s'amusant avec JavaScript 2e Úd pour les Nuls",
+            "title": "Programmer en s'amusant avec JavaScript 2e ed pour les Nuls",
             "count_pages": 360,
             "current_page": 0,
             "ISBN": "9782412045152",
@@ -1142,7 +1142,7 @@
         "model": "app_books.book",
         "pk": 50,
         "fields": {
-            "title": "Design patterns TÛte la premiÞre",
+            "title": "Design patterns Tete la premiere",
             "count_pages": 639,
             "current_page": 0,
             "ISBN": "2841773507",
@@ -1157,7 +1157,7 @@
         "model": "app_books.book",
         "pk": 51,
         "fields": {
-            "title": "HTML avec CSS et XHTML TÛte la premiÞre",
+            "title": "HTML avec CSS et XHTML Tete la premiere",
             "count_pages": 657,
             "current_page": 0,
             "ISBN": "2841774139",
@@ -1172,7 +1172,7 @@
         "model": "app_books.book",
         "pk": 52,
         "fields": {
-            "title": "SQL TÛte la premiÞre",
+            "title": "SQL Tete la premiere",
             "count_pages": 574,
             "current_page": 0,
             "ISBN": "2841774708",
@@ -1187,7 +1187,7 @@
         "model": "app_books.book",
         "pk": 53,
         "fields": {
-            "title": "Le web mobile tÛte la premiÞre",
+            "title": "Le web mobile tete la premiere",
             "count_pages": 468,
             "current_page": 0,
             "ISBN": "2100581791",
@@ -1202,7 +1202,7 @@
         "model": "app_books.book",
         "pk": 54,
         "fields": {
-            "title": "Analyse et conception orientÚes objet TÛte la premiÞre",
+            "title": "Analyse et conception orientees objet Tete la premiere",
             "count_pages": 600,
             "current_page": 0,
             "ISBN": "2841774317",
