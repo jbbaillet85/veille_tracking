@@ -83,7 +83,11 @@ https://trello.com/b/kXOWpHUQ/veilletraking#
 renommer le fichier .env\_example en .env et y mettre les variables d'environnement.
 
 Sous windows:lancer docker-deskop
-
-    docker-compose build
-    docker-compose up
-    docker-compose logs -f
+Dans le terminal
+```
+    docker-compose up --build
+```
+Puis pour accéder à l'application, aller dans le navigateur à l'adresse:
+```http://localhost:8000```.
+Pour accéder à l'administration, aller à l'adresse:
+```http://localhost:8000/admin```
