@@ -2,7 +2,7 @@ from pathlib import Path
 import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
-TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
+TEMPLATES_DIR = Path(BASE_DIR, "templates")
 
 SECRET_KEY = os.environ.get(
     "SECRET_KEY", default="0kv@@+4yi_*4)u_lfbd)kx4_(+y@!q52nd4a*rekkif8on&wg2"
@@ -100,8 +100,8 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 if DEBUG:
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+    STATICFILES_DIRS = [Path(BASE_DIR, "static")]
 else:
-    STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+    STATIC_ROOT = Path(BASE_DIR, "staticfiles")
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
