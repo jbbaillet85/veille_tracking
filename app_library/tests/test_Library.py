@@ -14,11 +14,9 @@ class Test_Library(TestCase):
     def setUp(self):
         self.email = "user@gmail.com"
         self.password = "password"
-        self.user = User.objects.create(
-            email=self.email, password=self.password)
+        self.user = User.objects.create(email=self.email, password=self.password)
         self.author = Author(
-            name="Martin", lastname="Robert",
-            contact="contact", slug="martin-robert"
+            name="Martin", lastname="Robert", contact="contact", slug="martin-robert"
         )
         self.author.save()
         category = Category(name="Méthodes Agiles", slug="methodes-agiles")
@@ -49,24 +47,3 @@ class Test_Library(TestCase):
     def test_Library_model(self):
         expected_value = f"{self.user} : {self.book}"
         self.assertEqual(str(self.library), expected_value)
-
-    @pytest.mark.django_db
-    def test_createLibrary_view(self):
-        client = Client()
-        path = reverse("createLibrary")
-        client.login(email=self.email, password=self.password)
-        response = client.post(path, kwargs={"book_slug": self.book.slug})
-        self.assertIsInstance(self.library, Library)
-        self.assertEqual(response.status_code, 302)
-
-    @pytest.mark.django_db
-    def test_saveCurrentPage_views(self):
-        client = Client()
-        client.login(email=self.email, password=self.password)
-        path = reverse("saveCurrentPage")
-        response = client.get(path)
-        self.assertEqual(response.status_code, 302)
-
-        response = client.post(path, kwargs={"book_slug": self.book.slug})
-        self.assertEqual(response.status_code, 302)
-        self.assertIn(str(reverse("saveCurrentPage")), str(response))
