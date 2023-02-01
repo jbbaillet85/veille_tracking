@@ -1,9 +1,6 @@
 from unittest import TestCase
 import pytest
 
-from django.urls import reverse
-from django.test import Client
-
 from app_library.models import Library
 from app_user.models import User
 from app_books.models import Book, Author, Edition, Category
@@ -14,12 +11,15 @@ class Test_Library(TestCase):
     def setUp(self):
         self.email = "user@gmail.com"
         self.password = "password"
-        self.user = User.objects.create(email=self.email, password=self.password)
+        self.user = User.objects.create(
+            email=self.email, password=self.password)
         self.author = Author(
-            name="Martin", lastname="Robert", contact="contact", slug="martin-robert"
+            name="Martin", lastname="Robert",
+            contact="contact", slug="martin-robert"
         )
         self.author.save()
-        category = Category(name="Méthodes Agiles", slug="methodes-agiles")
+        category = Category(
+            name="Méthodes Agiles", slug="methodes-agiles")
         edition = Edition(name="Pearson", slug="pearson")
         edition.save()
         title = "Agile Proprement Retour à l'essentiel"
