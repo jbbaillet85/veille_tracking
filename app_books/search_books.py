@@ -1,3 +1,6 @@
+from django.contrib.postgres.search import SearchVector
+from app_books.models import Book
+
 class SearchBooks:
     """
     SearchBooks is a class used to search for books based on keyword.
