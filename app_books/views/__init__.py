@@ -1,3 +1,7 @@
+from django.shortcuts import render
+from app_books.search_books import SearchBooks
+
+
 def search_book(request):
     """
     Handles the view for searching books by keyword.
