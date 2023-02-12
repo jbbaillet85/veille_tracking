@@ -15,6 +15,7 @@ psycopg2-binary = "*"
 pillow = "*"
 gunicorn = "*"
 django-extensions = "*"
+djangorestframework = "*"
 
 [dev-packages]
 pytest-django = "*"

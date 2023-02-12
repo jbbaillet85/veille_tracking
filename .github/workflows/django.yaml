@@ -2,9 +2,9 @@ name: CI Django Postgres Pytest
 
 on:
   push:
-    branches: [main]
+    branches: [main, api]
   pull_request:
-    branches: [main]
+    branches: [main, api]
 
 jobs:
   build:
