@@ -2,7 +2,7 @@ from django.db import models
 from django.db.models.constraints import UniqueConstraint
 
 from app_books.models import Book
-from app_user.models import User
+from django.contrib.auth import get_user_model
 
 
 class Library(models.Model):
@@ -22,7 +22,7 @@ class Library(models.Model):
 
     """
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
     current_page = models.IntegerField(default=0)
 

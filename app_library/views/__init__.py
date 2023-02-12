@@ -4,7 +4,7 @@ from django.shortcuts import get_object_or_404
 from django.views.generic import CreateView
 from app_library.models import Library
 from app_books.models import Book
-from app_user.models import User
+from django.contrib.auth import get_user_model
 
 
 class CreateLibraryView(CreateView):
@@ -30,7 +30,7 @@ def createLibrary(request):
         # Get the book that matches the given slug
         book = Book.objects.filter(slug=slug)
         # Get the current user from the request
-        user: User = request.user
+        user: get_user_model() = request.user
         # Get or create the library for the user and book
         library, _ = Library.objects.get_or_create(book=book[0], user=user)
         # Redirect to the library view
@@ -47,7 +47,7 @@ def saveCurrentPage(request):
         # Get the book's slug from the request
         slug = request.POST["book_slug"]
         # Get the current user from the request
-        user = request.user
+        user: get_user_model() = request.user
         # Get the current page from the request
         current_page = request.POST["current_page"]
         # Get the book that matches the given slug

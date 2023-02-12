@@ -1,7 +1,7 @@
 from django.urls import reverse
 from django.views.generic import CreateView
 from app_user.views.forms import RegisterForm
-from app_user.models import User
+from django.contrib.auth import get_user_model
 
 
 class RegisterUserView(CreateView):
@@ -15,7 +15,7 @@ class RegisterUserView(CreateView):
         The form class to be used for user registration.
     """
 
-    model = User
+    model = get_user_model()
     template_name = "app_user/register.html"
     form_class = RegisterForm
 
