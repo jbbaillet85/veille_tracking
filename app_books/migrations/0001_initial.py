@@ -26,17 +26,20 @@ class Migration(migrations.Migration):
                 (
                     "name",
                     models.CharField(
-                        default="", max_length=100, verbose_name="Nom"),
+                        default="", max_length=100, verbose_name="Nom"
+                    ),
                 ),
                 (
                     "lastname",
                     models.CharField(
-                        default="", max_length=100, verbose_name="Prénom"),
+                        default="", max_length=100, verbose_name="Prénom"
+                    ),
                 ),
                 (
                     "contact",
                     models.URLField(
-                        blank=True, default="", verbose_name="Contact"),
+                        blank=True, default="", verbose_name="Contact"
+                    ),
                 ),
                 (
                     "slug",
@@ -64,17 +67,20 @@ class Migration(migrations.Migration):
                 (
                     "title",
                     models.CharField(
-                        default="", max_length=255, verbose_name="Titre"),
+                        default="", max_length=255, verbose_name="Titre"
+                    ),
                 ),
                 (
                     "count_pages",
                     models.IntegerField(
-                        default=0, verbose_name="Nombre de pages"),
+                        default=0, verbose_name="Nombre de pages"
+                    ),
                 ),
                 (
                     "current_page",
                     models.IntegerField(
-                        default=0, verbose_name="Page Courante"),
+                        default=0, verbose_name="Page Courante"
+                    ),
                 ),
                 ("ISBN", models.CharField(default="", max_length=13)),
                 (
@@ -87,8 +93,10 @@ class Migration(migrations.Migration):
                         blank=True, default="", max_length=255, unique=True
                     ),
                 ),
-                ("couverture", models.URLField(
-                    default="", verbose_name="Couverture")),
+                (
+                    "couverture",
+                    models.URLField(default="", verbose_name="Couverture"),
+                ),
                 (
                     "author",
                     models.ForeignKey(
@@ -118,12 +126,16 @@ class Migration(migrations.Migration):
                 (
                     "name",
                     models.CharField(
-                        default="", max_length=255,
-                        unique=True, verbose_name="Editeur"
+                        default="",
+                        max_length=255,
+                        unique=True,
+                        verbose_name="Editeur",
                     ),
                 ),
-                ("slug", models.SlugField(
-                    blank=True, max_length=255, unique=True)),
+                (
+                    "slug",
+                    models.SlugField(blank=True, max_length=255, unique=True),
+                ),
             ],
             options={
                 "verbose_name": "Editeur",
@@ -150,12 +162,15 @@ class Migration(migrations.Migration):
                         verbose_name="Catégorie",
                     ),
                 ),
-                ("slug", models.SlugField(
-                    blank=True, max_length=255, unique=True)),
+                (
+                    "slug",
+                    models.SlugField(blank=True, max_length=255, unique=True),
+                ),
                 (
                     "category",
                     models.ManyToManyField(
-                        to="app_books.book", verbose_name="Livre"),
+                        to="app_books.book", verbose_name="Livre"
+                    ),
                 ),
             ],
             options={

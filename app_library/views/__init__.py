@@ -6,18 +6,23 @@ from app_library.models import Library
 from app_books.models import Book
 from app_user.models import User
 
+
 class CreateLibraryView(CreateView):
     """A view for creating a library for a user and a book.
-    This view uses the CreateView generic view and is associated with the Library model.
+    This view uses the CreateView generic view
+    and is associated with the Library model.
     """
+
     model = Library
     template_name = "app_library/library.html"
     fields = ["book", "user"]
 
+
 @login_required
 def createLibrary(request):
     """A view for creating a library for a user and a book.
-    This view is decorator with the @login_required decorator, which requires that the user be logged in to access this view.
+    This view is decorator with the @login_required decorator,
+    which requires that the user be logged in to access this view.
     """
     if request.method == "POST":
         # Get the book's slug from the request
@@ -35,7 +40,8 @@ def createLibrary(request):
 @login_required
 def saveCurrentPage(request):
     """A view for saving the current page of a book for a user.
-    This view is decorator with the @login_required decorator, which requires that the user be logged in to access this view.
+    This view is decorator with the @login_required decorator, which requires
+    that the user be logged in to access this view.
     """
     if request.method == "POST":
         # Get the book's slug from the request

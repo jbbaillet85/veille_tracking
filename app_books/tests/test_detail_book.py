@@ -11,8 +11,10 @@ from app_books.models import Author, Category, Edition, Book
 class Test_Book(TestCase):
     def setUp(self):
         self.author = Author(
-            name="Martin", lastname="Robert",
-            contact="contact", slug="martin-robert"
+            name="Martin",
+            lastname="Robert",
+            contact="contact",
+            slug="martin-robert",
         )
         self.author.save()
         category = Category(name="Méthodes Agiles", slug="methodes-agiles")

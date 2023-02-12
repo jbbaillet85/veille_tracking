@@ -8,12 +8,15 @@ from app_books.models import Book, Author, Category, Edition
 class Test_Book(TestCase):
     def setUp(self):
         self.author = Author(
-            name="Martin", lastname="Robert",
-            contact="contact", slug="martin-robert"
+            name="Martin",
+            lastname="Robert",
+            contact="contact",
+            slug="martin-robert",
         )
         self.author.save()
         self.category = Category(
-            name="Méthodes Agiles", slug="methodes-agiles")
+            name="Méthodes Agiles", slug="methodes-agiles"
+        )
         self.edition = Edition(name="Pearson", slug="pearson")
         self.edition.save()
         title = "Agile Proprement Retour à l'essentiel"

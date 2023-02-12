@@ -2,6 +2,7 @@ from django.contrib.auth.models import AbstractUser
 from django.contrib.auth.base_user import BaseUserManager
 from django.db import models
 
+
 class CustomUserManager(BaseUserManager):
     """
     Custom manager for User model.
@@ -28,10 +29,12 @@ class CustomUserManager(BaseUserManager):
         kwargs["is_active"] = True
         return self.create_user(email=email, password=password, **kwargs)
 
+
 class User(AbstractUser):
     """
     Custom User model, with email as the unique identifier instead of username.
     """
+
     username = None
     email = models.EmailField(("email"), unique=True)
     USERNAME_FIELD = "email"

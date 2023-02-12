@@ -13,10 +13,13 @@ class LibraryViewTests(TestCase):
         self.email = "user@gmail.com"
         self.password = "password"
         self.user = User.objects.create(
-            email=self.email, password=self.password)
+            email=self.email, password=self.password
+        )
         self.author = Author(
-            name="Martin", lastname="Robert",
-            contact="contact", slug="martin-robert"
+            name="Martin",
+            lastname="Robert",
+            contact="contact",
+            slug="martin-robert",
         )
         self.author.save()
         category = Category(name="Méthodes Agiles", slug="methodes-agiles")

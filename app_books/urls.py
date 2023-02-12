@@ -7,8 +7,8 @@ urlpatterns = [
     path(
         "<slug:slug>/",
         DetailView.as_view(
-            template_name="app_books/detail_book.html",
-            model=Book),
+            template_name="app_books/detail_book.html", model=Book
+        ),
         name="book-detail",
     ),
     path("search_book", search_book, name="search_book"),

@@ -13,7 +13,8 @@ class Test_User(TestCase):
     @pytest.mark.django_db
     def test_create_user_model(self):
         self.user = User.objects.create_user(
-            email=self.email, password=self.password)
+            email=self.email, password=self.password
+        )
         assert str(self.user) == self.email
         self.assertEqual(self.user.email, "user@gmail.com")
 

@@ -1,5 +1,7 @@
 from django.template.defaultfilters import slugify
 from django.db import models
+from django_extensions.db.fields import AutoSlugField
+from django.utils.translation import gettext_lazy
 
 
 class Edition(models.Model):
@@ -26,7 +28,7 @@ class Edition(models.Model):
     name = models.CharField(
         max_length=255, unique=True, verbose_name="Editeur", default=""
     )
-    slug = models.SlugField(max_length=255, unique=True, blank=True)
+    slug = AutoSlugField(gettext_lazy("Slug"), populate_from=("name",))
 
     class Meta:
         verbose_name = "Editeur"
@@ -37,13 +39,13 @@ class Edition(models.Model):
         """
         return slugify(self.name)
 
-    def save(self, *args, **kwargs):
-        """
-        This custom save method generates the slug if it doesn't exist yet.
-        """
-        if not self.slug:
-            self.slug = slugify(self.name)
-        super().save(*args, **kwargs)
+    # def save(self, *args, **kwargs):
+    #     """
+    #     This custom save method generates the slug if it doesn't exist yet.
+    #     """
+    #     if not self.slug:
+    #         self.slug = slugify(self.name)
+    #     super().save(*args, **kwargs)
 
 
 class Author(models.Model):
@@ -72,10 +74,12 @@ class Author(models.Model):
 
     name = models.CharField(max_length=100, verbose_name="Nom", default="")
     lastname = models.CharField(
-        max_length=100, verbose_name="Prénom", default="")
+        max_length=100, verbose_name="Prénom", default=""
+    )
     contact = models.URLField(verbose_name="Contact", default="", blank=True)
     slug = models.SlugField(
-        max_length=255, default="", unique=True, blank=True)
+        max_length=255, default="", unique=True, blank=True
+    )
 
     class Meta:
         verbose_name = "Auteur(e)"
@@ -123,15 +127,18 @@ class Book(models.Model):
 
     title = models.CharField(max_length=255, verbose_name="Titre", default="")
     count_pages = models.IntegerField(
-        verbose_name="Nombre de pages", default=0)
+        verbose_name="Nombre de pages", default=0
+    )
     current_page = models.IntegerField(verbose_name="Page Courante", default=0)
     ISBN = models.CharField(max_length=13, default="")
     more_infos = models.URLField(verbose_name="Plus d'infos", default="")
     slug = models.SlugField(
-        max_length=255, unique=True, blank=True, default="")
+        max_length=255, unique=True, blank=True, default=""
+    )
     couverture = models.URLField(verbose_name="Couverture", default="")
     author = models.ForeignKey(
-        Author, on_delete=models.SET_NULL, null=True, blank=True)
+        Author, on_delete=models.SET_NULL, null=True, blank=True
+    )
     edition = models.ForeignKey(
         Edition, on_delete=models.SET_NULL, null=True, blank=True
     )

@@ -11,7 +11,8 @@ from app_user.views import RegisterUserView
 class Test_User(TestCase):
     def setUp(self):
         self.user = User.objects.create(
-            email="test@gmail.com", password="123456")
+            email="test@gmail.com", password="123456"
+        )
         self.register = RegisterUserView()
 
     @pytest.mark.django_db

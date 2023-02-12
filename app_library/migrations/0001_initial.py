@@ -9,20 +9,30 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('app_books', '0001_initial'),
+        ("app_books", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Library',
+            name="Library",
             fields=[
-                ('id', models.BigAutoField(
-                    auto_created=True, primary_key=True,
-                    serialize=False, verbose_name='ID')),
-                ('current_page', models.IntegerField(default=0)),
-                ('book', models.ForeignKey(
-                    on_delete=django.db.models.deletion.CASCADE,
-                    to='app_books.book')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("current_page", models.IntegerField(default=0)),
+                (
+                    "book",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="app_books.book",
+                    ),
+                ),
             ],
         ),
     ]
