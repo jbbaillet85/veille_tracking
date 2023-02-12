@@ -25,4 +25,5 @@ urlpatterns = [
     path("user/", include("app_user.urls")),
     path("book/", include("app_books.urls")),
     path("library/", include("app_library.urls")),
+    path("api/", include("api.urls")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
