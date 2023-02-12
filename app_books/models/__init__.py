@@ -12,7 +12,7 @@ class Edition(models.Model):
     Attributes:
     - name: a CharField with a max length of 255 and a unique constraint.
     Represents the name of the Edition.
-    - slug: a SlugField with a max length of 255 and a unique constraint.
+    - slug: a AutoSlugField with a max length of 255 and a unique constraint.
     Represents the URL-friendly version of the Edition name.
     Examples:
     >>> edition = Edition(name='Edition 1')
@@ -96,7 +96,7 @@ class Book(models.Model):
     and a default value of an empty string.
     more_infos: URLField with a verbose name of "Plus d'infos".
     It has a default value of an empty string.
-    slug: SlugField with a max length of 255 characters,
+    slug: AutoSlugField with a max length of 255 characters,
     which must be unique and can be blank.
     It has a default value of an empty string.
     couverture: URLField with a verbose name of "Couverture".
@@ -139,7 +139,7 @@ class Category(models.Model):
         name (models.CharField): The name of the category with
         a maximum length of 255 characters and unique.
         The default value is an empty string.
-        slug (models.SlugField): A unique identifier for the category.
+        slug (AutoSlugField): A unique identifier for the category.
         The maximum length is 255 characters and it can be blank.
         category (models.ManyToManyField):
         A many-to-many relationship with the Book model.
