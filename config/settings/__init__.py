@@ -1,8 +1,12 @@
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 TEMPLATES_DIR = Path(BASE_DIR, "templates")
+
+load_dotenv(dotenv_path=BASE_DIR / ".env")
 
 SECRET_KEY = os.environ.get(
     "SECRET_KEY", default="0kv@@+4yi_*4)u_lfbd)kx4_(+y@!q52nd4a*rekkif8on&wg2"
@@ -13,8 +17,7 @@ DJANGO_SUPERUSER_PASSWORD = os.environ.get("DJANGO_SUPERUSER_PASSWORD")
 DEBUG = int(os.environ.get("DEBUG", default=True))
 
 ALLOWED_HOSTS = os.environ.get(
-    "DJANGO_ALLOWED_HOSTS", default="localhost 127.0.0.1"
-).split(" ")
+    "DJANGO_ALLOWED_HOSTS", default="localhost").split(" ")
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -64,9 +67,7 @@ WSGI_APPLICATION = "config.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": os.environ.get(
-            "SQL_ENGINE", "django.db.backends.postgresql"
-        ),  # noqa
+        "ENGINE": os.environ.get("SQL_ENGINE", "django.db.backends.postgresql"),  # noqa
         "NAME": os.environ.get("SQL_DATABASE", "postgres"),
         "USER": os.environ.get("SQL_USER", "postgres"),
         "PASSWORD": os.environ.get("SQL_PASSWORD", "postgres"),
