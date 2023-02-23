@@ -4,48 +4,50 @@
 
 # veille\_tracking
 
+URL du site en production: <http://146.59.150.169/>
+
 application de tracking de lecture de livres
 ![livres](/static/assets/img/bibliotheque.jpg "livres")
 
 # Logiciels
 
-*   [Python 3.10](https://www.python.org/ "python")
-*   [Django 4](https://www.djangoproject.com/ "django")
-*   [Postgresql 14](https://www.postgresql.fr/ "Postgresql")
-*   [Docker 20.10](https://www.docker.com/ "Docker")
-*   [draw.io](https://draw-io.fr.softonic.com/ "draw.io")
+* [Python 3.10](https://www.python.org/ "python")
+* [Django 4](https://www.djangoproject.com/ "django")
+* [Postgresql 14](https://www.postgresql.fr/ "Postgresql")
+* [Docker 20.10](https://www.docker.com/ "Docker")
+* [draw.io](https://draw-io.fr.softonic.com/ "draw.io")
 
 # Tableau Trello
 
-https://trello.com/b/kXOWpHUQ/veilletraking#
+<https://trello.com/b/kXOWpHUQ/veilletraking#>
 
 # Modèles
 
-*   Book
-    *   title
-    *   slug
-    *   count of pages
-    *   current\_page
-    *   ISBN
-    *   couverture
-    *   edition (foreignkey)
-    *   authore (foreignkey)
-    *   url
-    *   category (foreignkey)
-*   Category
-    *   name
-    *   slug
-*   Edition
-    *   name
-    *   slug
-*   Author
-    *   name
-    *   lastname
-    *   slug
-*   User
-    *   name
-    *   lastename
-    *   email
+* Book
+  * title
+  * slug
+  * count of pages
+  * current\_page
+  * ISBN
+  * couverture
+  * edition (foreignkey)
+  * authore (foreignkey)
+  * url
+  * category (foreignkey)
+* Category
+  * name
+  * slug
+* Edition
+  * name
+  * slug
+* Author
+  * name
+  * lastname
+  * slug
+* User
+  * name
+  * lastename
+  * email
 
 ![diagrame entité association](/doc/association_entity_diagram.jpg "livres")
 
@@ -59,7 +61,7 @@ https://trello.com/b/kXOWpHUQ/veilletraking#
 \[ ] Supprimer un livre de sa bibliothèque\
 \[X] Tracker la lecture d'un livre\
 \[X] Afficher l'avancé de la lecture du livre\
-\[ ] Barre de recherche de l'application\
+\[X] Barre de recherche de l'application\
 \[X] Afficher le catalogue de livres\
 \[X] Afficher le détail d'un livre
 
@@ -74,20 +76,7 @@ https://trello.com/b/kXOWpHUQ/veilletraking#
     pipenv run python manage.py runserver
     pipenv run python manage.py makemigrations
     pipenv run python manage.py migrate
+    pipenv run python manage.py loadata books_backup.json
     pipenv run python manage.py collectstatic
     pipenv run pytest
     pipenv run pytest --cov=. --cov-report html
-
-# Commandes docker
-
-renommer le fichier .env\_example en .env et y mettre les variables d'environnement.
-
-Sous windows:lancer docker-deskop
-Dans le terminal
-```
-    docker-compose up --build
-```
-Puis pour accéder à l'application, aller dans le navigateur à l'adresse:
-```http://localhost:8000```.
-Pour accéder à l'administration, aller à l'adresse:
-```http://localhost:8000/admin```
