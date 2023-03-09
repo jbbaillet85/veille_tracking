@@ -60,7 +60,7 @@ https://trello.com/b/kXOWpHUQ/veilletraking#
 \[X] Ajouter un livre à sa bibliothèque\
 \[ ] Supprimer un livre de sa bibliothèque\
 \[X] Tracker la lecture d'un livre\
-\[X] Afficher l'avancé de la lecture du livre\
+\[X] Afficher l'avancée de la lecture du livre\
 \[ ] Barre de recherche de l'application\
 \[X] Afficher le catalogue de livres\
 \[X] Afficher le détail d'un livre

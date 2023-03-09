@@ -1,35 +1,45 @@
 {% extends "base/base.html" %}
+{% block title_h2 %}Connection{% endblock %}
 {% block content %}
-{% if form.errors %}
-<p>Votre nom d'utilisateur et votre mot de passe ne correspondent pas. Veuillez réessayer.</p>
-{% endif %}
-
-{% if next %}
-    {% if user.is_authenticated %}
-    <p>Votre compte n'a pas accès à cette page.
-        veuillez vous connecter avec un compte qui y a accès.</p>
-    {% else %}
-    <p>Veuillez vous connecter pour voir cette page.</p>
+<div class="container my-4 text-left">
+    {% if form.errors %}
+    <div class="alert alert-danger" role="alert">
+        Votre nom d'utilisateur et votre mot de passe ne correspondent pas. Veuillez réessayer.
+    </div>
     {% endif %}
-{% endif %}
 
-<form method="post" action="{% url 'login' %}">
-{% csrf_token %}
-<table>
-<tr>
-    <td>{{ form.username.label_tag }}</td>
-    <td>{{ form.username }}</td>
-</tr>
-<tr>
-    <td>{{ form.password.label_tag }}</td>
-    <td>{{ form.password }}</td>
-</tr>
-</table>
-
-<input type="submit" value="se connecter">
-<input type="hidden" name="next" value="{{ next }}">
-</form>
-
-{# Assumes you set up the password_reset view in your URLconf #}
-{% comment %} <p><a href="{% url 'password_reset' %}">Lost password?</a></p> {% endcomment %}
+    {% if next %}
+        {% if user.is_authenticated %}
+        <div class="alert alert-danger" role="alert">
+            Votre compte n'a pas accès à cette page. Veuillez vous connecter avec un compte qui y a accès.
+        </div>
+        {% else %}
+        <div class="alert alert-info" role="alert">
+            Veuillez vous connecter pour voir cette page.
+        </div>
+        {% endif %}
+    {% endif %}
+    <form method="post" action="{% url 'login' %}" class="mt-3">
+        {% csrf_token %}
+        <table>
+            <tbody>
+            <tr>
+                <td>{{ form.username.label_tag }}</td>
+                <td>{{ form.username }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.password.label_tag }}</td>
+                <td>{{ form.password }}</td>
+            </tr>
+            <tbody>
+        </table>
+        <div class="mt-3">
+            <input type="submit" class="btn btn-primary" value="Se connecter">
+        </div>
+    </form>
+    <div class="mt-3 text-center">
+        <p>Pas encore de compte ?</p>
+        <a href="{% url 'register' %}">s'enregistrer</a>
+    </div>
+</div>
 {% endblock %}

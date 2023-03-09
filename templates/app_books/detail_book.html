@@ -11,7 +11,7 @@
                     <p>ISBN: {{ object.ISBN }}</p>
                     <p>Nombre de pages: {{ object.count_pages }}</p>
                     <p>Edition: {{ object.edition.name }}</p>
-                    <p>Autheur: {{ object.author }}</p>
+                    <p>Auteur: {{ object.author }}</p>
                     <form method="post" action="{% url 'createLibrary' %}">
                         {% csrf_token %}
                         <input type="hidden" name="book_slug" value={{ object.slug }}>
