@@ -1,12 +1,42 @@
 {% extends "base/base.html" %}
-{% block title_h1 %}Inscription{% endblock %}
+{% block title_h2 %}Inscription{% endblock %}
 {% block content %}
-    <form method="POST">
-        {% if form.errors %}
-        {{ form.errors }}
-        {% endif %}
+<div class="container">
+    <!-- Afficher les erreurs du formulaire -->
+    <form method="POST" class="row g-3 needs-validation">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" >S’inscrire</button>
+        {% if form.errors %}
+        <div class="col-12 alert alert-danger" role="alert">
+            {{ form.errors }}
+        </div>
+        {% endif %}
+        <div class="col-md-6">
+            <label for="{{ form.email.id_for_label }}" class="form-label">{{ form.email.label }}</label>
+            {{ form.email }}
+        </div>
+        <div class="col-md-6">
+            <label for="{{ form.password1.id_for_label }}" class="form-label">{{ form.password1.label }}</label>
+            {{ form.password1 }}
+        </div>
+        <div class="col-md-6">
+            <label for="{{ form.password2.id_for_label }}" class="form-label">{{ form.password2.label }}</label>
+            {{ form.password2 }}
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">S’inscrire</button>
+        </div>
     </form>
+    <!-- Lien vers la page de connexion -->
+    <div class="col-12">
+        <p class="mt-3">Vous avez déjà un compte ?</p>
+        <a href="{% url 'login' %}" class="btn btn-outline-primary">Se connecter</a>
+    </div>
+    <!-- Message de réussite après l'inscription réussie -->
+    {% if request.GET.next %}
+    <div class="alert alert-success mt-3" role="alert">
+        Vous êtes maintenant inscrit ! Veuillez vous <a href="{% url 'login' %}">connecter</a>.
+    </div>
+    {% endif %}
+</div>
+
 {% endblock content %}
