@@ -1,7 +1,8 @@
 from pathlib import Path
 import os
 from dotenv import load_dotenv
-
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 TEMPLATES_DIR = Path(BASE_DIR, "templates")
@@ -16,8 +17,7 @@ DJANGO_SUPERUSER_PASSWORD = os.environ.get("DJANGO_SUPERUSER_PASSWORD")
 
 DEBUG = int(os.environ.get("DEBUG", default=True))
 
-ALLOWED_HOSTS = os.environ.get(
-    "DJANGO_ALLOWED_HOSTS", default="localhost").split(" ")
+ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", default="localhost").split(" ")
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -107,3 +107,12 @@ else:
     STATIC_ROOT = Path(BASE_DIR, "staticfiles")
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+sentry_sdk.init(
+    dsn=os.environ.get("SENTRY_DSN"),
+    integrations=[
+        DjangoIntegration(),
+    ],
+    traces_sample_rate=1.0,
+    send_default_pii=True,
+)
