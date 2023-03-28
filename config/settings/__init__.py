@@ -42,6 +42,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'sentry_sdk.integrations.django.middleware.SentryMiddleware',
 ]
 
 ROOT_URLCONF = "config.urls"
