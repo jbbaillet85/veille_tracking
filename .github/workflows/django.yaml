@@ -2,9 +2,7 @@ name: CI Django Postgres Pytest
 
 on:
   push:
-    branches: [main, production]
   pull_request:
-    branches: [main, production]
 
 jobs:
   build:
@@ -39,6 +37,9 @@ jobs:
       - name: Install requirements
         run: |
           pip install -r requirements_dev.txt
+      - name: Lint with Flake8
+        run: |
+          flake8
       - name: Run Tests
         env:
           DEBUG: "0"
