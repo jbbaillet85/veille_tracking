@@ -16,7 +16,6 @@ pillow = "*"
 gunicorn = "*"
 django-extensions = "*"
 python-dotenv = "*"
-sentry-sdk = "*"
 
 [dev-packages]
 pytest-django = "*"
