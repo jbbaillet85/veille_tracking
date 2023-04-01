@@ -2,9 +2,7 @@ name: CI Django Postgres Pytest
 
 on:
   push:
-    branches: [main, production]
   pull_request:
-    branches: [main, production]
 
 jobs:
   build:
@@ -39,6 +37,9 @@ jobs:
       - name: Install requirements
         run: |
           pip install -r requirements_dev.txt
+      - name: Lint with Flake8
+        run: |
+          flake8
       - name: Run Tests
         env:
           DEBUG: "0"
@@ -50,3 +51,9 @@ jobs:
           DB_PORT: ${{ env.POSTGRES_PORT }}
         run: |
           pytest
+      # Cancel the workflow if any of the previous steps fail
+      - name: Cancel workflow on failure
+        uses: styfle/cancel-workflow-action@0.12.0
+        with:
+          workflow_file: ${{ github.workflow }}
+          access_token: ${{ secrets.GITHUB_TOKEN }}
