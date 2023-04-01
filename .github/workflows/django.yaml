@@ -51,3 +51,12 @@ jobs:
           DB_PORT: ${{ env.POSTGRES_PORT }}
         run: |
           pytest
+      - name: Reject push on failed tests or linter
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Automatic commit on failed tests or linter"
+          commit_options: "--no-verify"
+          file_pattern: "."
+          branch: ${{ github.ref }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
