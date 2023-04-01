@@ -51,9 +51,12 @@ jobs:
           DB_PORT: ${{ env.POSTGRES_PORT }}
         run: |
           pytest
+<<<<<<< HEAD
       # Cancel the workflow if any of the previous steps fail
       - name: Cancel workflow on failure
         uses: styfle/cancel-workflow-action@0.12.0
         with:
           workflow_file: ${{ github.workflow }}
           access_token: ${{ secrets.GITHUB_TOKEN }}
+=======
+>>>>>>> a2796916749d85a8b3961246d9828fff2416dbc4
