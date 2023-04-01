@@ -1,5 +1,6 @@
 from pathlib import Path
 import os
+import santry
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 TEMPLATES_DIR = Path(BASE_DIR, "templates")
