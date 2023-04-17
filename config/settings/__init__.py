@@ -1,26 +1,11 @@
 from pathlib import Path
 import os
-import sentry_sdk
-from sentry_sdk.integrations.django import DjangoIntegration
 from dotenv import load_dotenv
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 TEMPLATES_DIR = Path(BASE_DIR, "templates")
 
 load_dotenv(dotenv_path=BASE_DIR / ".env")
-
-
-sentry_sdk.init(
-    dsn=os.environ.get("DNS_SENTRY"),
-    integrations=[
-        DjangoIntegration(
-            transaction_style='url',
-            middleware_spans=True,
-            signals_spans=False,
-        ),
-    ],
-    traces_sample_rate=1.0,
-)
 
 SECRET_KEY = os.environ.get(
     "SECRET_KEY", default="0kv@@+4yi_*4)u_lfbd)kx4_(+y@!q52nd4a*rekkif8on&wg2"
