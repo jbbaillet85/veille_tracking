@@ -1,10 +1,24 @@
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404
-from django.views.generic import CreateView
+from django.views.generic import CreateView, ListView
 from app_library.models import Library
 from app_books.models import Book
 from django.contrib.auth import get_user_model
+
+
+@login_required
+def user_library(request):
+    return Library.objects.filter(user=request.user).order_by("-id")
+
+
+class LibraryView(ListView):
+    paginate_by = 21
+    ordering = ["-id"]
+    template_name = "app_library/library.html"
+
+    def get_queryset(self):
+        return user_library(self.request)
 
 
 class CreateLibraryView(CreateView):
