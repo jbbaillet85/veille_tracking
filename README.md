@@ -4,6 +4,8 @@
 
 # veille\_tracking
 
+Site en production: http://146.59.150.169/
+
 application de tracking de lecture de livres
 ![livres](/static/assets/img/bibliotheque.jpg "livres")
 
@@ -71,6 +73,7 @@ https://trello.com/b/kXOWpHUQ/veilletraking#
     pipenv install --dev flake8 pytest-django
     pipenv run pip freeze > requirements_dev.txt
     pipenv lock -r > requirements.txt
+    pipenv lock --requirements --dev > requirements_dev.txt
     pipenv run python manage.py runserver
     pipenv run python manage.py makemigrations
     pipenv run python manage.py migrate

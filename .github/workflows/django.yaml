@@ -51,12 +51,10 @@ jobs:
           DB_PORT: ${{ env.POSTGRES_PORT }}
         run: |
           pytest
-      - name: Reject push on failed tests or linter
-        uses: stefanzweifel/git-auto-commit-action@v4
+      # Cancel the workflow if any of the previous steps fail
+      - name: Cancel Workflow Action
+        uses: styfle/cancel-workflow-action@0.11.0
         with:
-          commit_message: "Automatic commit on failed tests or linter"
-          commit_options: "--no-verify"
-          file_pattern: "."
-          branch: ${{ github.ref }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          workflow_file: ${{ github.workflow }}
+          access_token: ${{ secrets.GITHUB_TOKEN }}
+

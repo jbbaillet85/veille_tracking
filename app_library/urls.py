@@ -1,17 +1,11 @@
 from django.urls import path
-from django.views.generic import ListView
-from app_library.views import createLibrary, saveCurrentPage
-from .models import Library
+from app_library.views import createLibrary, saveCurrentPage, LibraryView
+
 
 urlpatterns = [
     path(
         "library",
-        ListView.as_view(
-            template_name="app_library/library.html",
-            model=Library,
-            paginate_by=21,
-            ordering=["-id"],
-        ),
+        LibraryView.as_view(),
         name="library",
     ),
     path("createLibrary", createLibrary, name="createLibrary"),
