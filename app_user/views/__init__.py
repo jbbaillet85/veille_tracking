@@ -1,5 +1,6 @@
-from django.urls import reverse
-from django.views.generic import CreateView
+from django.urls import reverse, reverse_lazy
+from django.views.generic import CreateView, DeleteView
+from django.contrib.auth.mixins import LoginRequiredMixin
 from app_user.views.forms import RegisterForm
 from django.contrib.auth import get_user_model
 
@@ -27,3 +28,12 @@ class RegisterUserView(CreateView):
             str: The URL of the success page.
         """
         return reverse("library")
+
+
+class DeleteUserView(LoginRequiredMixin, DeleteView):
+    model = get_user_model()
+    template_name = 'app_user/delete_user.html'
+    success_url = reverse_lazy('login')
+
+    def get_object(self, queryset=None):
+        return self.request.user
