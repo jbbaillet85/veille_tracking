@@ -1,10 +1,12 @@
 {% extends "base/base.html" %}
-{% block title_h2 %}Compte {{ user.email }}{% endblock %}
+{% block title_h2 %}Bibliothèque {{ user.email }}{% endblock %}
 {% block content %}
 {% for library in object_list %}
         <article>
         <figure class="card-body col-lg-4 col-sm-6">
+            <a href="{% url "book-detail" library.book.slug %}">
             <img src="{{ library.book.couverture }}" alt="{{ library.book.title }}" width="200" height="300">
+            </a>
         </figure>
         <button value={{ library.current_page}}>page {{ library.current_page}}</button>
         <label for="library">progression:</label>
@@ -16,6 +18,11 @@
             min="{{ library.book.current_page }}" max="{{ library.book.count_pages }}">
             <input type="hidden" name="book_slug" value={{ library.book.slug }}>
             <input type="submit" value="enregistrer">
+        </form>
+        <form method="post" action="{% url 'delete_library' %}">
+            {% csrf_token %}
+            <input type="hidden" name="book_slug" value={{ library.book.slug }}>
+            <input type="submit" value="Retirer ce livre de la bibliothèque">
         </form>
     </article>     
 {% endfor %}

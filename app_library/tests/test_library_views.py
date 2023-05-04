@@ -3,6 +3,7 @@ from django.test import RequestFactory, TestCase
 from app_books.models import Book, Author, Edition, Category
 from app_library.models import Library
 from app_library.views import createLibrary, saveCurrentPage, CreateLibraryView
+from app_library.views import delete_library
 from django.template.defaultfilters import slugify
 from django.urls import reverse
 
@@ -74,3 +75,12 @@ class LibraryViewTests(TestCase):
         self.assertEqual(response.status_code, 302)
         self.assertEqual(Library.objects.count(), 1)
         self.assertEqual(Library.objects.get().current_page, 10)
+
+    def test_delete_library(self):
+        Library.objects.create(book=self.book, user=self.user, current_page=0)
+        path = reverse("delete_library")
+        request = self.factory.post(path, {"book_slug": self.book.slug})
+        request.user = self.user
+        response = delete_library(request)
+        self.assertEqual(response.status_code, 302)
+        self.assertFalse(Library.objects.filter(book=self.book).exists())
