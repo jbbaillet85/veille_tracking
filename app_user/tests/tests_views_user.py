@@ -24,7 +24,7 @@ class Test_User(TestCase):
             path, kwargs={"email": "email@email.com", "password1": "password"}
         )
 
-        self.assertEqual(self.register.get_success_url(), reverse("library"))
+        self.assertEqual(self.register.get_success_url(), reverse("homepage"))
         self.assertEqual(response.status_code, 200)
         assertTemplateUsed(response, "app_user/register.html")
         self.assertEqual(resolve(path).view_name, "register")
