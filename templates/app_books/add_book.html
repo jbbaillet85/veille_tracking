@@ -1,0 +1,18 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title_h2 %}Proposer un livre à la communauté{% endblock %}
+{% block content %}
+    <div class="masthead-content">
+        <div class="container px-5">
+            <div class="container-fluid p-0">
+                <form method="post" action="{% url 'add_book' %}">
+                    {% csrf_token %}
+                    <table>
+                        {{ form.as_table }}
+                    </table>
+                    <input type="submit" value="ajouter">
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

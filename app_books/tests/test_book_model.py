@@ -1,4 +1,5 @@
 from unittest import TestCase
+from django.urls import reverse
 import pytest
 
 from django.template.defaultfilters import slugify
@@ -43,3 +44,11 @@ class Test_Book(TestCase):
     def test_book_model(self):
         assert str(self.book) == self.expected_value
         assert self.book.slug == self.expected_value
+
+    @pytest.mark.django_db
+    def test_get_absolute_url(self):
+        # Call the get_absolute_url method on the book object
+        url = self.book.get_absolute_url()
+        # Assert that the returned URL is the expected URL
+        assert url == reverse('book-detail', args=[self.book.slug])
+
