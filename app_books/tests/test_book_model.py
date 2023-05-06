@@ -51,4 +51,3 @@ class Test_Book(TestCase):
         url = self.book.get_absolute_url()
         # Assert that the returned URL is the expected URL
         assert url == reverse('book-detail', args=[self.book.slug])
-

@@ -131,7 +131,7 @@ class Book(models.Model):
         The string representation of this model is the slug.
         """
         return self.slug
- 
+
     def get_absolute_url(self):
         return reverse('book-detail', args=[str(self.slug)])
 
