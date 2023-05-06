@@ -12,14 +12,16 @@
                         </div>
                     </form>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">S'enregistrer</a></li>
                 {% if user.is_authenticated %}
-                <li class="nav-item"><a class="nav-link" href="{% url 'library' %}">{{ user.email }}</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'library' %}">Bibliothèque {{ user.email }}</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Deconnection</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'add_book' %}">Proposer un livre</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'contribution' %}">Contribuer au projet</a></li>
                 {% else %}
+                <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">S'enregistrer</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">S'identifier</a></li>
                 {% endif %}
-                <li class="nav-item"><a class="nav-link" href="{% url 'add_book' %}">Proposer un livre</a></li>
+
             </ul>
         </div>
     </div>
