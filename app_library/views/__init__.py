@@ -72,3 +72,14 @@ def saveCurrentPage(request):
         library.update(book=book, user=user, current_page=current_page)
         # Redirect to the library view
         return redirect("library")
+
+
+def delete_library(request):
+    """Function allowing the user to delete a book from their library.
+    """
+    if request.method == "POST":
+        slug = request.POST["book_slug"]
+        book = get_object_or_404(Book, slug=slug)
+        book = get_object_or_404(Library, book=book, user=request.user)
+        book.delete()
+        return redirect('library')
