@@ -1,5 +1,8 @@
 from django.shortcuts import render
+from django.views.generic import CreateView
 from app_books.search_books import SearchBooks
+from app_books.models import Book
+from app_books.forms import BookForm
 
 
 def search_book(request):
@@ -21,3 +24,9 @@ def search_book(request):
         "object_list": books.search_books,
     }
     return render(request, "app_books/search_book.html", context)
+
+
+class BookCreateView(CreateView):
+    model = Book
+    template_name = "app_books/add_book.html"
+    form_class = BookForm

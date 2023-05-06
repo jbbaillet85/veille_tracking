@@ -1,5 +1,6 @@
 from django.template.defaultfilters import slugify
 from django.db import models
+from django.urls import reverse
 from django_extensions.db.fields import AutoSlugField
 from django.utils.translation import gettext_lazy
 
@@ -107,11 +108,12 @@ class Book(models.Model):
     on delete behavior and it can be null and blank.
     """
 
-    title = models.CharField(max_length=255, verbose_name="Titre", default="")
+    title = models.CharField(
+        max_length=255, verbose_name="Titre", default="")
     count_pages = models.IntegerField(
         verbose_name="Nombre de pages", default=0)
     current_page = models.IntegerField(verbose_name="Page Courante", default=0)
-    ISBN = models.CharField(max_length=13, default="")
+    ISBN = models.CharField(max_length=13, default="", unique=True)
     more_infos = models.URLField(verbose_name="Plus d'infos", default="")
     slug = AutoSlugField(gettext_lazy("Slug"), populate_from=("title",))
     couverture = models.URLField(verbose_name="Couverture", default="")
@@ -129,6 +131,9 @@ class Book(models.Model):
         The string representation of this model is the slug.
         """
         return self.slug
+
+    def get_absolute_url(self):
+        return reverse('book-detail', args=[str(self.slug)])
 
 
 class Category(models.Model):
