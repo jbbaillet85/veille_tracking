@@ -9,6 +9,12 @@ Site en production: http://146.59.150.169/
 application de tracking de lecture de livres
 ![livres](/static/assets/img/bibliotheque.jpg "livres")
 
+L'application Veille Tracking a pour objectif d'offrir une solution spécifique pour les informaticiens qui cherchent à rester à la pointe de l'actualité technologique en matière de livres d'informatique en français.\
+En recommandant des livres d'informatique pertinents et de haute qualité, Veille Tracking aide les professionnels à se tenir informés des dernières avancées dans leur domaine, à améliorer leurs compétences et à rester compétitifs sur le marché du travail.\
+En facilitant l'accès à des ressources informatiques de qualité, l'application contribue à renforcer la formation et l'éducation des professionnels de l'informatique, ce qui se traduit par un impact social positif à long terme.\
+De plus, Veille Tracking crée une communauté de lecteurs passionnés grâce à son club de lecture en ligne.\
+Les utilisateurs peuvent partager leurs opinions sur les livres, discuter des dernières tendances en matière de technologie, proposer des livres pour le catalogue et interagir avec d'autres membres de la communauté. Cette dimension communautaire de l'application encourage les interactions entre professionnels, favorisant ainsi l'apprentissage collaboratif et le partage de connaissances.\
+En fin de compte, Veille Tracking aide les informaticiens à relever les défis complexes du monde numérique d'aujourd'hui, en améliorant leurs performances. Cette application communautaire en ligne permet également de renforcer les liens entre les membres de la communauté, créant ainsi un environnement favorable à l'épanouissement professionnel et personnel des utilisateurs.
 # Logiciels
 
 *   [Python 3.10](https://www.python.org/ "python")
@@ -56,14 +62,20 @@ https://trello.com/b/kXOWpHUQ/veilletraking#
 \[X] Afficher une page d'accueil\
 \[X] Créer un compte utilisateur\
 \[X] Se connecter à son compte utilisateur\
+\[X] Pouvoir suppimer son compte utilisateur\
 \[ ] Réinitialiser le mot de passe en cas d'oublis\
 \[X] Ajouter un livre à sa bibliothèque\
-\[ ] Supprimer un livre de sa bibliothèque\
+\[X] Supprimer un livre de sa bibliothèque\
 \[X] Tracker la lecture d'un livre\
 \[X] Afficher l'avancée de la lecture du livre\
-\[ ] Barre de recherche de l'application\
+\[X] Barre de recherche de l'application\
 \[X] Afficher le catalogue de livres\
-\[X] Afficher le détail d'un livre
+\[X] Afficher le détail d'un livre\
+\[X] Proposer un livre au catalogue\
+\[ ] Ajouter un commentaire sur la page de détail du livre\
+\[ ] Ajouter une évaluation d'un livre\
+\[X] Contribuer au projet via un sondage via la page contribution\
+\[X] Contribuer au projet via les github-issues\
 
 # Commandes Pipenv
 
@@ -78,19 +90,6 @@ https://trello.com/b/kXOWpHUQ/veilletraking#
     pipenv run python manage.py makemigrations
     pipenv run python manage.py migrate
     pipenv run python manage.py collectstatic
+    pipenv run python manage.py loaddata books_backup.json
     pipenv run pytest
     pipenv run pytest --cov=. --cov-report html
-
-# Commandes docker
-
-renommer le fichier .env\_example en .env et y mettre les variables d'environnement.
-
-Sous windows:lancer docker-deskop
-Dans le terminal
-```
-    docker-compose up --build
-```
-Puis pour accéder à l'application, aller dans le navigateur à l'adresse:
-```http://localhost:8000```.
-Pour accéder à l'administration, aller à l'adresse:
-```http://localhost:8000/admin```

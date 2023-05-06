@@ -22,6 +22,10 @@ urlpatterns = [
         TemplateView.as_view(template_name="credits/credits.html"),
         name="credits",
     ),
+    path(
+        "contribution",
+        TemplateView.as_view(template_name="contribution/contribution.html"),
+        name="contribution"),
     path("user/", include("app_user.urls")),
     path("book/", include("app_books.urls")),
     path("library/", include("app_library.urls")),

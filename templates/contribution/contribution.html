@@ -1,0 +1,24 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title_h1 %}{% endblock %}
+{% block title_h2 %}Contribuer au projet veille_tracking{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Sondage des besoins utilisateurs</h3>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdVlKlt6knePAGXoh_6XS5G7cbDRRBzLth7XS-ttgbEjo6BxA/viewform?embedded=true"
+        title="User Needs Survey"
+        width="100%"
+        height="520"
+        style="border: none;"
+    ></iframe>
+      </div>
+    </div>
+  </div>
+  
+<h3>Proposer une sugestion ou signaler un problème via les github-issues</h3>
+<a href="https://github.com/jbbaillet85/veille_tracking/issues">
+    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="50" height="50">
+  </a>
+{% endblock %}
