@@ -18,10 +18,17 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Library',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(
+                    auto_created=True,
+                    primary_key=True,
+                    serialize=False, verbose_name='ID')),
                 ('current_page', models.IntegerField(default=0)),
-                ('book', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='app_books.book')),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
-            ],
-        ),
-    ]
+                ('book', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE,
+                    to='app_books.book')),
+                ('user', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE,
+                    to=settings.AUTH_USER_MODEL)),
+                    ],
+                ),
+            ]
