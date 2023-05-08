@@ -12,7 +12,7 @@ urlpatterns = [
         ListView.as_view(
             template_name="homepage/homepage.html",
             model=Book,
-            paginate_by=3,
+            paginate_by=9,
             ordering=["-id"],
         ),
         name="homepage",
