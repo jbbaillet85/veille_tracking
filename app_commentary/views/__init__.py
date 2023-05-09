@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404
-from django.views.generic import CreateView, UpdateView
+from django.views.generic import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.contrib import messages
@@ -47,3 +47,10 @@ class CommentaryUpdateView(LoginRequiredMixin, UpdateView):
         messages.error(self.request,
                        "Erreur lors de la mise à jour du commentaire.")
         return super().form_invalid(form)
+
+
+class CommentaryDeleteView(LoginRequiredMixin, DeleteView):
+    model = Commentary
+    success_url = reverse_lazy('library')
+    pk_url_kwarg = 'pk'
+    template_name = 'app_commentary/deleteCommentary.html'

@@ -15,7 +15,7 @@
                     <form method="post" action="{% url 'createLibrary' %}">
                         {% csrf_token %}
                         <input type="hidden" name="book_slug" value={{ object.slug }}>
-                        <input type="submit" value="ajouter à la bibliothèque">
+                        <input type="submit" value="ajouter à la bibliothèque" class="btn btn-success">
                     </form>
                     <h5 class="mt-3">Commentaires</h5>
                     {% with comments=object.commentary_set.all %}
