@@ -29,6 +29,34 @@
                 <input type="hidden" name="book_slug" value={{ library.book.slug }}>
                 <input type="submit" value="Retirer ce livre de la bibliothèque">
             </form>
+            <form method="post" action="{% url 'createCommentary' %}">
+                {% csrf_token %}
+                <input type="hidden" name="isbn" value="{{ library.book.ISBN }}">
+                <input type="hidden" name="user_id" value="{{ request.user.id }}">
+                <input type="submit" value="Ajouter un commentaire">
+            </form>
+            <h5 class="mt-3">Commentaires</h5>
+            <div class="card mt-3">
+                <div class="card-body">
+                    {% with comments=library.book.commentary_set.all %}
+                        {% for comment in comments %}
+                            {% if comment.user == request.user %}
+                                <div class="card mt-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-dark">{{ comment.title }}</h5>
+                                        <h5 class="card-subtitle text-dark">{{ comment.notation }}</h5>
+                                        <p class="card-text text-dark">{{ comment.commentary }}</p>
+                                    </div>
+                                    <a href="{% url 'updateCommentary' pk=comment.pk %}" class="btn btn-sm btn-secondary">Modifier</a>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% endwith %}
+                </div>
+            </div>          
+        </div>
+        </div>
+    </article> 
         </div>
     </article>     
 {% endfor %}
