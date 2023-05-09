@@ -12,7 +12,7 @@ urlpatterns = [
         ListView.as_view(
             template_name="homepage/homepage.html",
             model=Book,
-            paginate_by=3,
+            paginate_by=9,
             ordering=["-id"],
         ),
         name="homepage",
@@ -29,4 +29,5 @@ urlpatterns = [
     path("user/", include("app_user.urls")),
     path("book/", include("app_books.urls")),
     path("library/", include("app_library.urls")),
+    path("commentary/", include("app_commentary.urls")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

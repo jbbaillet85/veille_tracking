@@ -1,0 +1,23 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<div class="container">
+  <h3 class="mb-3">Ajouter un commentaire pour <strong>{{ book.title }}</strong></h3>
+  <div class="row">
+    <div class="col-md-4">
+      <img src="{{ book.couverture }}" alt="{{ book.title }}" class="img-fluid">
+    </div>
+    <div class="col-md-8">
+      <form method="post" action="{% url 'createCommentary' %}">
+        {% csrf_token %}
+        <input type="hidden" name="isbn" value="{{ book.ISBN }}">
+        <input type="hidden" name="user_id" value="{{ request.user.id }}">
+        <div class="form-group">
+          {{ form.as_p }}
+        </div>
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

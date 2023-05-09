@@ -1,0 +1,37 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<div class="container">
+  <h3 class="mb-3">Modifier le commentaire pour <strong>{{ commentary.book.title }}</strong></h3>
+  <div class="row">
+    <div class="col-md-4">
+      <img src="{{ commentary.book.couverture }}" alt="{{ commentary.book.title }}" class="img-fluid">
+    </div>
+    <div class="col-md-8">
+      <form method="post" action="{% url 'updateCommentary' pk=commentary.pk %}">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="id_title">Titre :</label>
+          <input type="text" class="form-control" id="id_title" name="title" value="{{ commentary.title }}">
+        </div>
+        <div class="form-group">
+          <label for="id_notation">Notation :</label>
+          <select class="form-control" id="id_notation" name="notation">
+            <option value="" {% if not commentary.notation %}selected{% endif %}>Sélectionnez une notation</option>
+            <option value="1" {% if commentary.notation == 1 %}selected{% endif %}>1 étoile</option>
+            <option value="2" {% if commentary.notation == 2 %}selected{% endif %}>2 étoiles</option>
+            <option value="3" {% if commentary.notation == 3 %}selected{% endif %}>3 étoiles</option>
+            <option value="4" {% if commentary.notation == 4 %}selected{% endif %}>4 étoiles</option>
+            <option value="5" {% if commentary.notation == 5 %}selected{% endif %}>5 étoiles</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="id_commentary">Commentaire :</label>
+          <textarea class="form-control" id="id_commentary" name="commentary" rows="5">{{ commentary.commentary }}</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

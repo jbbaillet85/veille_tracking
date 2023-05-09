@@ -3,6 +3,7 @@
 {% block title_h1 %}Ready For Read{% endblock %}
 {% block title_h2 %}C'est parti{% endblock %}
 {% block content %}
+<h3>Catalogue de livres</h3>
                 {% for book in object_list %}
                     <figure class="card-body col-lg-4 col-sm-6">
                         <a href="{% url "book-detail" book.slug %}">
@@ -10,26 +11,44 @@
                         </a>
                     </figure>
                 {% endfor %}
-                <nav aria-label="...">
-                <ul class="pagination">
-                    <li class="page-item step-links">
-                        {% if page_obj.has_previous %}
-                            <a class="page-link" href="?page=1">&laquo; début</a>
-                            <a class="page-link" href="?page={{ page_obj.previous_page_number }}">précédent</a>
-                        {% endif %}
-                
-                        <li class="page-item active page-link">
-                            Page {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
-                            <span class="sr-only">(current)</span>
+                <nav aria-label="Pagination">
+                    <ul class="pagination justify-content-center">
+                      {% if page_obj.has_previous %}
+                        <li class="page-item">
+                          <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Aller à la page précédente">Précédent</a>
                         </li>
-                
-                        {% if page_obj.has_next %}
-                            <a class="page-link" href="?page={{ page_obj.next_page_number }}">suivant</a>
-                            <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">fin &raquo;</a>
+                      {% endif %}
+                  
+                      {% for num in page_obj.paginator.page_range %}
+                        {% if num == 1 %}
+                          <li class="page-item">
+                            <a class="page-link" href="?page=1" aria-label="Aller à la première page">Début</a>
+                          </li>
                         {% endif %}
-                    </li>
-                </ul>
-            </nav>
+                        {% if num == page_obj.number %}
+                          <li class="page-item active">
+                            <a class="page-link" href="#">{{ num }} <span class="sr-only">(page courante)</span></a>
+                          </li>
+                        {% elif num > page_obj.number|add:'-4' and num < page_obj.number|add:'4' %}
+                          <li class="page-item">
+                            <a class="page-link" href="?page={{ num }}" aria-label="Aller à la page {{ num }}">{{ num }}</a>
+                          </li>
+                        {% endif %}
+                        {% if num == page_obj.paginator.num_pages %}
+                          <li class="page-item">
+                            <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}" aria-label="Aller à la dernière page">Fin</a>
+                          </li>
+                        {% endif %}
+                      {% endfor %}
+                  
+                      {% if page_obj.has_next %}
+                        <li class="page-item">
+                          <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Aller à la page suivante">Suivant</a>
+                        </li>
+                      {% endif %}
+                    </ul>
+                  </nav>
+                                               
 {% endblock %}
 <!-- Content section 1-->
 {% block presentation %}
