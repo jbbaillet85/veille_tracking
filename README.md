@@ -72,10 +72,12 @@ https://trello.com/b/kXOWpHUQ/veilletraking#
 \[X] Afficher le catalogue de livres\
 \[X] Afficher le détail d'un livre\
 \[X] Proposer un livre au catalogue\
-\[ ] Ajouter un commentaire sur la page de détail du livre\
-\[ ] Ajouter une évaluation d'un livre\
+\[X] Ajouter un commentaire sur la page de détail du livre\
+\[X] Ajouter une évaluation d'un livre\
 \[X] Contribuer au projet via un sondage via la page contribution\
 \[X] Contribuer au projet via les github-issues\
+
+![fonctionalités](/doc/parcour%20utilisateur.jpg "Fonctionalités")
 
 # Commandes Pipenv
 
