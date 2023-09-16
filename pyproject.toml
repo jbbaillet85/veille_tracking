@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "veille-tracking"
+version = "0.1.0"
+description = ""
+authors = ["Jean-Baptiste Baillet <jbbaillet.dev@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Django = "^4.2.4"
+psycopg = "^3.1.10"
+django-extensions = "^3.2.3"
+python-dotenv = "^1.0.0"
+Pillow = "^10.0.0"
+django-import-export = "^3.2.0"
+whitenoise = "^6.5.0"
+psycopg-binary = "^3.1.10"
+
+[tool.poetry.group.dev.dependencies]
+pytest-django = "^4.5.2"
+flake8 = "^6.1.0"
+coverage = "^7.3.0"
+pytest-cov = "^4.1.0"
+black = "^23.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
