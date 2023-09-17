@@ -8,6 +8,7 @@ from app_commentary.views.form import CommentaryForm
 class TestCommentaryForm(TestCase):
     def setUp(self):
         self.user = get_user_model().objects.create_user(
+            username='test',
             email='testuser@test.com',
             password='testpass'
         )

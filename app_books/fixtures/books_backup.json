@@ -422,7 +422,7 @@
         "model": "app_books.book",
         "pk": 2,
         "fields": {
-            "title": "Le genie logiciel oriente objet: Une approche fondÚe sur les cas d'utilisation",
+            "title": "Le genie logiciel oriente objet",
             "count_pages": 536,
             "current_page": 0,
             "ISBN": "2879080428",
@@ -797,7 +797,7 @@
         "model": "app_books.book",
         "pk": 27,
         "fields": {
-            "title": "DevOps Integrez et deployez en continu (avec exemple cles en main)",
+            "title": "DevOps Integrez et deployez en continu",
             "count_pages": 364,
             "current_page": 0,
             "ISBN": "978-2-409-017",
