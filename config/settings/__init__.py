@@ -18,7 +18,7 @@ DEBUG = int(os.environ.get("DEBUG", default=True))
 ALLOWED_HOSTS = os.environ.get(
     "DJANGO_ALLOWED_HOSTS", default="localhost").split(" ")
 
-INSTALLED_APPS = [
+DJANGO_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -26,12 +26,23 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django.contrib.postgres",
+    "django.contrib.sites",
+]
+THIRD_PARTY_APPS = [
     "django_extensions",
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    "allauth.socialaccount.providers.github",
+]
+
+LOCAL_APPS = [
     "app_books",
-    "app_user",
     "app_library",
     "app_commentary",
+    "app_user",
 ]
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -41,6 +52,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "allauth.account.middleware.AccountMiddleware",
 ]
 
 ROOT_URLCONF = "config.urls"
@@ -91,14 +103,34 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTH_USER_MODEL = "app_user.User"
+AUTH_USER_MODEL = 'app_user.User'
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_UNIQUE_EMAIL = True
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+
 LOGIN_REDIRECT_URL = "homepage"
-LOGIN_URL = "login"
 LANGUAGE_CODE = "fr-fr"
 TIME_ZONE = "UTC"
 USE_I18N = True
 USE_TZ = True
 
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+SITE_ID = 1
+ACCOUNT_EMAIL_VERIFICATION = "none"
+ACCOUNT_LOGOUT_ON_GET = True
+SOCIALACCOUNT_PROVIDERS = {
+    'github': {
+        'APP': {
+            'client_id': os.environ.get('GITHUB_ID'),
+            'secret': os.environ.get('GITHUB_SECRET'),
+            'key': os.environ.get('GITHUB_KEY'),
+        }
+    }
+}
 
 STATIC_URL = "static/"
 if DEBUG:

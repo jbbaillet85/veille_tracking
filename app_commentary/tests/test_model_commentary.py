@@ -7,6 +7,7 @@ from app_commentary.models import Commentary
 class TestCommentaryModel(TestCase):
     def setUp(self):
         self.user = get_user_model().objects.create_user(
+            username='test',
             email='testuser@test.com',
             password='testpass'
         )
