@@ -13,16 +13,16 @@ class Test_User(TestCase):
 
     @pytest.mark.django_db
     def test_create_user_model(self):
-        self.user = User.objects.create_user(username=self.username,
-            email=self.email, password=self.password
+        self.user = User.objects.create_user(
+            username=self.username, email=self.email, password=self.password
         )
         assert str(self.user) == self.email
         self.assertEqual(self.user.email, "user@gmail.com")
 
     @pytest.mark.django_db
     def test_create_superuser_model(self):
-        self.superuser = User.objects.create_superuser(username=self.username,
-            email=self.email, password=self.password
+        self.superuser = User.objects.create_superuser(
+            username=self.username, email=self.email, password=self.password
         )
         assert str(self.superuser) == self.email
         self.assertEqual(self.superuser.email, "user@gmail.com")
