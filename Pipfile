@@ -4,10 +4,10 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-asgiref = "==3.5.0"
-sqlparse = "==0.4.2"
-tzdata = "==2021.5"
-Django = "==4.0.3"
+asgiref = "*"
+sqlparse = "*"
+tzdata = "*"
+Django = "*"
 whitenoise = "*"
 django-import-export = "*"
 psycopg2 = "*"
@@ -26,4 +26,4 @@ pytest-cov = "*"
 black = "*"
 
 [requires]
-python_version = "3.10"
+python_version = "3.12"
