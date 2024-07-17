@@ -44,7 +44,7 @@ jobs:
           mkdir logs
       - name: Lint with Flake8
         run: |
-          flake8
+          pipenv run flake8
       - name: Run Tests
         env:
           DEBUG: "0"
