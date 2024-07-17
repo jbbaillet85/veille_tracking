@@ -124,8 +124,8 @@ ACCOUNT_EMAIL_VERIFICATION = "none"
 ACCOUNT_LOGOUT_ON_GET = True
 
 filterwarnings(
-    """ignore",
-    "The FORMS_URLFIELD_ASSUME_HTTPS transitional setting is deprecated."""
+    "ignore",
+    "The FORMS_URLFIELD_ASSUME_HTTPS transitional setting is deprecated.",  # noqa
 )
 FORMS_URLFIELD_ASSUME_HTTPS = True
 
