@@ -1,5 +1,7 @@
-from pathlib import Path
 import os
+from pathlib import Path
+from warnings import filterwarnings
+
 from dotenv import load_dotenv
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
@@ -15,8 +17,7 @@ DJANGO_SUPERUSER_PASSWORD = os.environ.get("DJANGO_SUPERUSER_PASSWORD")
 
 DEBUG = int(os.environ.get("DEBUG", default=True))
 
-ALLOWED_HOSTS = os.environ.get(
-    "DJANGO_ALLOWED_HOSTS", default="localhost").split(" ")
+ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", default="localhost").split(" ")
 
 DJANGO_APPS = [
     "django.contrib.admin",
@@ -30,10 +31,9 @@ DJANGO_APPS = [
 ]
 THIRD_PARTY_APPS = [
     "django_extensions",
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    "allauth.socialaccount.providers.github",
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
 ]
 
 LOCAL_APPS = [
@@ -103,11 +103,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTH_USER_MODEL = 'app_user.User'
-ACCOUNT_AUTHENTICATION_METHOD = 'email'
+AUTH_USER_MODEL = "app_user.User"
+ACCOUNT_AUTHENTICATION_METHOD = "email"
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 
 LOGIN_REDIRECT_URL = "homepage"
 LANGUAGE_CODE = "fr-fr"
@@ -116,21 +116,18 @@ USE_I18N = True
 USE_TZ = True
 
 AUTHENTICATION_BACKENDS = (
-    'django.contrib.auth.backends.ModelBackend',
-    'allauth.account.auth_backends.AuthenticationBackend',
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
 )
 SITE_ID = 1
 ACCOUNT_EMAIL_VERIFICATION = "none"
 ACCOUNT_LOGOUT_ON_GET = True
-SOCIALACCOUNT_PROVIDERS = {
-    'github': {
-        'APP': {
-            'client_id': os.environ.get('GITHUB_ID'),
-            'secret': os.environ.get('GITHUB_SECRET'),
-            'key': os.environ.get('GITHUB_KEY'),
-        }
-    }
-}
+
+filterwarnings(
+    """ignore",
+    "The FORMS_URLFIELD_ASSUME_HTTPS transitional setting is deprecated."""
+)
+FORMS_URLFIELD_ASSUME_HTTPS = True
 
 STATIC_URL = "static/"
 if DEBUG:
@@ -141,17 +138,17 @@ else:
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'file': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': Path(BASE_DIR, 'logs/django.log'),
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "file": {
+            "level": "DEBUG",
+            "class": "logging.FileHandler",
+            "filename": Path(BASE_DIR, "logs/django.log"),
         },
     },
-    'root': {
-        'handlers': ['file'],
-        'level': 'DEBUG',
+    "root": {
+        "handlers": ["file"],
+        "level": "DEBUG",
     },
 }
