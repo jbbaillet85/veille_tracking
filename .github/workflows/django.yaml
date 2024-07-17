@@ -41,7 +41,7 @@ jobs:
           pipenv install --dev
       - name: Create logs directory
         run: |
-          mkdire logs
+          mkdir logs
       - name: Lint with Flake8
         run: |
           flake8
