@@ -34,9 +34,11 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Install requirements
+      - name: Install pipenv
+        run: pip install pipenv
+      - name: Install dependencies
         run: |
-          pip install -r requirements_dev.txt
+          pipenv install --dev
       - name: Create logs directory
         run: |
           mkdire logs
@@ -53,7 +55,7 @@ jobs:
           DB_DATABASE: ${{ env.POSTGRES_DB }}
           DB_PORT: ${{ env.POSTGRES_PORT }}
         run: |
-          pytest
+          pipenv run pytest
       # Cancel the workflow if any of the previous steps fail
       - name: Cancel Workflow Action
         uses: styfle/cancel-workflow-action@0.11.0
