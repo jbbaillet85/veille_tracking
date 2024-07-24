@@ -1,0 +1,26 @@
+version: 1
+
+applications:
+  - name: veille-tracking
+    type: django
+    git:
+      repo: https://github.com/jbbaillet85/veille_tracking.git
+      branch: main
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env:
+      - key: SECRET_KEY
+      - key: DEBUG
+      - key: POSTGRES_DB
+      - key: POSTGRES_USER
+      - key: POSTGRES_PASSWORD
+      - key: DATABASE_URL
+    services:
+      - name: postgres
+        type: postgresql
+        version: "16"
+        env:
+          POSTGRES_DB:
+          POSTGRES_USER:
+          POSTGRES_PASSWORD:
