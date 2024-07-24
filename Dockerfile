@@ -1,6 +1,8 @@
 # Utiliser une image Python 3.12 officielle
 FROM python:3.12-slim
 
+RUN apt-get update && apt-get install -y curl wget
+
 # Installer pipenv
 RUN pip install pipenv
 
