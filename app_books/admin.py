@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Book, Edition, Category, Author
+
+from .models import Author, Book, Category, Edition
 
 
 class EditionAdmin(admin.ModelAdmin):
@@ -33,6 +34,8 @@ class BookAdmin(admin.ModelAdmin):
         "ISBN",
         "author",
         "edition",
+        "submitted_by",
+        "is_approved",
     )
     search_fields = [
         "title",
@@ -40,7 +43,10 @@ class BookAdmin(admin.ModelAdmin):
         "ISBN",
         "author",
         "edition",
+        "submitted_by",
     ]
+    list_filter = ("author", "edition", "category", "is_approved", "submitted_by")
+    list_editable = ("is_approved",)
 
 
 admin.site.register(Book, BookAdmin)

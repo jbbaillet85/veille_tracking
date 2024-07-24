@@ -1,8 +1,9 @@
-from django.contrib import admin
-from django.urls import path, include
-from django.views.generic import TemplateView, ListView
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib import admin
+from django.urls import include, path
+from django.views.generic import ListView, TemplateView
+
 from app_books.models import Book
 
 urlpatterns = [
@@ -11,7 +12,7 @@ urlpatterns = [
         "",
         ListView.as_view(
             template_name="homepage/homepage.html",
-            model=Book,
+            queryset=Book.objects.filter(is_approved=True).order_by("-id"),
             paginate_by=9,
             ordering=["-id"],
         ),
@@ -25,7 +26,8 @@ urlpatterns = [
     path(
         "contribution",
         TemplateView.as_view(template_name="contribution/contribution.html"),
-        name="contribution"),
+        name="contribution",
+    ),
     path("book/", include("app_books.urls")),
     path("library/", include("app_library.urls")),
     path("commentary/", include("app_commentary.urls")),
