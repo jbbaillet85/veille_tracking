@@ -9,6 +9,7 @@ WORKDIR /app
 
 # Copier les fichiers Pipfile et Pipfile.lock
 COPY Pipfile Pipfile.lock /app/
+RUN mkdir logs /app
 
 # Installer les dépendances
 RUN pipenv install --deploy --ignore-pipfile
