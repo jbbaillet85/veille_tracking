@@ -1,26 +1,28 @@
-# Utiliser une image Python 3.12 officielle
-FROM python:3.12-slim
+# pull official base image
+FROM python:3.11.4-slim-buster
 
-RUN apt-get update && apt-get install -y curl wget
+# set work directory
+WORKDIR /usr/src/app
 
-# Installer pipenv
-RUN pip install pipenv
+# set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
 
-# Définir le répertoire de travail
-WORKDIR /app
+# install system dependencies
+RUN apt-get update && apt-get install -y netcat
 
-# Copier les fichiers Pipfile et Pipfile.lock
-COPY Pipfile Pipfile.lock /app/
-RUN mkdir logs
+# install dependencies
+RUN pip install --upgrade pip
+COPY ./requirements.txt .
+RUN pip install -r requirements.txt
 
-# Installer les dépendances
-RUN pipenv install --deploy --ignore-pipfile
+# copy entrypoint.sh
+COPY ./entrypoint.sh .
+RUN sed -i 's/\r$//g' /usr/src/app/entrypoint.sh
+RUN chmod +x /usr/src/app/entrypoint.sh
 
-# Copier le reste du code de l'application
-COPY . /app/
+# copy project
+COPY . .
 
-# Exposer le port utilisé par l'application
-EXPOSE 8000
-
-# Commande pour lancer l'application
-CMD ["pipenv", "run", "gunicorn", "--bind", "0.0.0.0:8000", "config.wsgi:application"]
+# run entrypoint.sh
+ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
