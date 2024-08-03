@@ -1,0 +1,8 @@
+.github
+.venv
+.vscode
+.vscodeignore
+.gitignore
+.git
+.pytest_cache
+.mypy_cache

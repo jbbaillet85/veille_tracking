@@ -15,7 +15,7 @@ SECRET_KEY = os.environ.get(
 
 DJANGO_SUPERUSER_PASSWORD = os.environ.get("DJANGO_SUPERUSER_PASSWORD")
 
-DEBUG = int(os.environ.get("DEBUG", default=True))
+DEBUG = os.environ.get("DEBUG", default=False)
 
 ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", default="localhost").split(" ")
 
@@ -129,11 +129,13 @@ filterwarnings(
 )
 FORMS_URLFIELD_ASSUME_HTTPS = True
 
-STATIC_URL = "static/"
+# URL utilisée pour référencer les fichiers statiques
+STATIC_URL = "/static/"
+
+# Dossiers supplémentaires contenant des fichiers statiques en mode DEBUG
 if DEBUG:
     STATICFILES_DIRS = [Path(BASE_DIR, "static")]
-else:
-    STATIC_ROOT = Path(BASE_DIR, "staticfiles")
+STATIC_ROOT = Path(BASE_DIR, "staticfiles")
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 

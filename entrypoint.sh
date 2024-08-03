@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# Wait for PostgreSQL to be available
 if [ "$DATABASE" = "postgres" ]
 then
     echo "Waiting for postgres..."
@@ -11,8 +12,31 @@ then
     echo "PostgreSQL started"
 fi
 
-python manage.py flush --no-input
-python manage.py migrate
-python manage.py collectstatic --no-input --clear
+cd /app
+pipenv install
+
+# Check if manage.py is executable and the environment is correct
+if [ ! -f manage.py ]; then
+    echo "manage.py not found"
+    exit 1
+fi
+
+echo "Checking pipenv environment..."
+pipenv --venv
+if [ $? -ne 0 ]; then
+    echo "pipenv environment not set up correctly"
+    exit 1
+fi
+
+echo "Checking Django installation..."
+pipenv run python -m django --version
+if [ $? -ne 0 ]; then
+    echo "Django not installed correctly in pipenv environment"
+    exit 1
+fi
+mkdir -p staticfiles
+pipenv run python manage.py flush --no-input
+pipenv run python manage.py migrate
+pipenv run python manage.py collectstatic --no-input --clear
 
 exec "$@"
